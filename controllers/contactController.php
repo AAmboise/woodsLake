@@ -27,8 +27,7 @@ function newMessage(){
     else{ 
         echo "le message n'as pu être envoyé";
         var_dump($_POST['nom']);
-        die;
-            
+        die;  
     }
 }
     
