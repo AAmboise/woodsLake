@@ -1,0 +1,16 @@
+li{
+    margin: auto 15px auto 15px; //haut/droit/bas/gauche
+    a{
+        color: white !important;
+        font-size: 45px !important;
+        
+        &.active{
+            text-decoration: underline;
+        }
+        &:hover{
+            font-style: italic;
+        }
+    }
+}
+
+

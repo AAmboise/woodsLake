@@ -1,0 +1,15 @@
+{
+  "name": "woodslake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "sass": "^1.54.4"
+  }
+}
