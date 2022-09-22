@@ -15,16 +15,16 @@
     <div class="collapse navbar-collapse " id="navbarNav">
       <ul class="navbar-nav  m-auto text-center">
         <li class="nav-item">
-          <a class="nav-link <?=$activeAccueil?>" href="/home">Accueil</a>
+          <a class="nav-link <?php if (isset($activeAccueil)){ $activeAccueil; } ?>" href="/home">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?=$activeGroupe?>" href="/groupe">Le groupe</a>
+          <a class="nav-link <?php if (isset($activeGroupe)){ $activeGroupe; } ?>" href="/groupe">Le groupe</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?=$activeGallerie?>" href="/gallerie">Gallerie</a>
+          <a class="nav-link <?php if (isset($activeGallerie)){ $activeGallerie; } ?>" href="/gallerie">Gallerie</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?=$activeContact?>" href="/contact">Nous contacter</a>
+          <a class="nav-link <?php if (isset($activeContact)){ $activeContact; } ?>" href="/contact">Nous contacter</a>
         </li>
       </ul>
     </div>
