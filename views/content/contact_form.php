@@ -1,8 +1,8 @@
 <?php 
     require_once './models/models.php';
-    require_once './controllers/controllers.php';
+    require_once './controllers/contactController.php';
  
-    
+
 ?>
 <form method="post">
     <div class="row">
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <!-- <div class="row">
+    <div class="row">
         <div class="col-6 text-end">
             <label for="prenom"> Votre Prénom :</label>
         </div>
@@ -44,7 +44,7 @@
         <div class="col-6">
             <textarea name="message" id="formulaire_message" cols="30" rows="10" required></textarea>
         </div>
-    </div> -->
+    </div>
 
     <div class="row">
         <div class="col text-center">

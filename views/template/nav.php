@@ -1,12 +1,4 @@
-<!-- <nav>
-    <ul>
-        <li><a href="/accueil">Accueil</a></li>
-        <li><a href="/groupe">Le groupe</a></li>
-        <li><a href="/gallerie">Gallerie</a></li>
-        <li><a href="/contact">Contact</a></li>
 
-    </ul>
-</nav> -->
 <nav class="navbar navbar-expand-lg bg-black">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

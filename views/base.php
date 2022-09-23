@@ -1,4 +1,5 @@
 <?php 
+ini_set('display_errors',true);
 require_once './models/models.php';
 require_once './controllers/controllers.php';
 ?>
