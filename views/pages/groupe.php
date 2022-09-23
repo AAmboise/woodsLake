@@ -3,7 +3,11 @@
 ob_start();
 ?>
 
-<div>groupe</div>
+<div class='container-fluid border border-light'>
+    <?php
+    require_once './views/content/groupe.php';
+    ?>
+</div>
 
 <?php
 

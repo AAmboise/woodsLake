@@ -1,0 +1,10 @@
+- Création espace utilisateur (réservation de place de concert)
+- ajout du captcha dans le form de contact
+- ajout d'un slider
+- CRUD Users
+- CRUD extrait audio
+- Re-Design
+- Récuperer des photos pour le slider
+- Le groupe
+- gallerie a faire
+- ajout d'image pour la gallerie

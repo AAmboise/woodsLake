@@ -3,7 +3,11 @@
 ob_start();
 ?>
 
-<div>gallerie</div>
+<div class='container border border-light'>
+    <?php
+    require_once './views/content/gallerie.php';
+    ?>
+</div>
 
 <?php
 
