@@ -1,12 +1,23 @@
-- Création espace utilisateur (réservation de place de concert)
-- ajout du captcha dans le form de contact
-- ajout d'un slider
-- CRUD Users
-- CRUD extrait audio
-- Le groupe
-- gallerie a faire
 
 Renommer les fichier photo et video avec https://www.php.net/base64_encode
 
 
 bug : 
+
+Création de page :
+- Inscription
+- crud Users
+- crud extrait audio
+- Crud photo
+- réservation de place
+
+Design : 
+- gallerie
+- groupe
+- ajout captcha contact form
+
+Responsive :
+- Accueil
+- contact
+- gallerie
+- groupe
