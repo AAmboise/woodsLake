@@ -1,7 +1,5 @@
 <?php 
 ini_set('display_errors',true);
-require_once './models/models.php';
-require_once './controllers/controllers.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +10,8 @@ require_once './controllers/controllers.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/ac64632661.js" crossorigin="anonymous"></script>
     <title><?=$titre?></title>
     <?=$css?>
 
@@ -20,12 +20,10 @@ require_once './controllers/controllers.php';
     
     <div class='container-fluid'>
 
-        <div class="row">
             <?php 
-                require_once './views/template/header.php';
                 $menu ? require_once './views/template/nav.php' : false;
+                require_once './views/template/header.php';
             ?>
-        </div>
 
         <div class='row main'>
             <?=$content?>

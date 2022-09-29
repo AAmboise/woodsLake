@@ -1,5 +1,5 @@
 <!-- <div>Slider</div> -->
-<div class="row slider border border-info my-3">
+<div class="row slider">
     <div class="col">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">

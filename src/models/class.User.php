@@ -7,7 +7,7 @@
         private string $password;
         private  bool $isAdmin;
 
-        public function __construct($pId, $Pseudo,$Password,$IsAdmin=0){
+        public function __construct($Id, $Pseudo,$Password,$IsAdmin=0){
             $this->id = (int)$Id;
             $this->pseudo = $Pseudo;
             $this->password = $Password;
@@ -17,7 +17,7 @@
         public function getId(): int{
             return $this->id;
         }
-        public function setId(int $id): int {
+        public function setId(int $id) {
             $this->id = $id;
      
             return $this;
@@ -37,6 +37,15 @@
         }
         public function setPassword(string $password): string {
             $this->password = $password;
+     
+            return $this;
+        }
+
+        public function getIsAdmin(){
+            return $this->isAdmin;
+        }
+        public function setIsAdmin(bool $isAdmin) {
+            $this->isAdmin = $isAdmin;
      
             return $this;
         }

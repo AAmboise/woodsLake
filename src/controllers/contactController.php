@@ -1,6 +1,6 @@
 <?php
 
-function contact(){
+
     $titre="Nous contacter";
     $css= ' <link rel="stylesheet" href="./assets/css/style.css">';
     $menu= true;
@@ -13,7 +13,7 @@ function contact(){
     else{
         echo 'test';
     }
-}
+
 
 
 

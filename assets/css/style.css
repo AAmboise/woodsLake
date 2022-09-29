@@ -15,6 +15,18 @@ body {
   min-height: 600px;
 }
 
+.slider {
+  min-height: 400px;
+}
+
+.extraits {
+  min-height: 400px;
+}
+
+.concerts {
+  min-height: 400px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,13 +57,17 @@ li {
 }
 li a {
   color: white !important;
-  font-size: 45px !important;
+  font-size: 20px !important;
 }
 li a.active {
   text-decoration: underline;
 }
 li a:hover {
   font-style: italic;
+}
+
+.nav1 a img {
+  height: 50px;
 }
 
 footer {
@@ -67,6 +83,41 @@ header img {
   width: 90vw;
   display: block;
   margin: auto;
+}
+
+.extrait .extrait__card {
+  min-height: 100px;
+}
+.extrait .extrait__titre {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.extrait .extrait__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.concerts img {
+  height: 100px;
+  margin-left: 20px;
+  padding: 5px 0px 5px 0px;
+}
+.concerts .concert__card--text {
+  font-size: 25px;
+  margin-left: -180px;
+}
+.concerts .concert__card--btn {
+  margin-right: 50px;
+}
+.concerts .concert__titre {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.concerts .concert__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

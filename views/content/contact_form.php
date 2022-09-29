@@ -1,6 +1,6 @@
 <?php 
-    require_once './models/models.php';
-    require_once './controllers/contactController.php';
+    require_once './src/models/models.php';
+    require_once './src/controllers/contactController.php';
  
 
 ?>
