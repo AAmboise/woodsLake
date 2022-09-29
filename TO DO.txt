@@ -3,8 +3,10 @@
 - ajout d'un slider
 - CRUD Users
 - CRUD extrait audio
-- Re-Design
-- Récuperer des photos pour le slider
 - Le groupe
 - gallerie a faire
-- ajout d'image pour la gallerie
+
+Renommer les fichier photo et video avec https://www.php.net/base64_encode
+
+
+bug : 

@@ -15,16 +15,16 @@ body {
   min-height: 600px;
 }
 
-.slider {
-  min-height: 400px;
-}
-
 .extraits {
   min-height: 400px;
 }
 
 .concerts {
   min-height: 400px;
+}
+
+.contact {
+  min-height: 200px;
 }
 
 * {
@@ -80,13 +80,15 @@ footer {
 }
 
 header img {
-  width: 90vw;
   display: block;
   margin: auto;
+  object-fit: cover;
 }
 
 .extrait .extrait__card {
   min-height: 100px;
+  font-size: 20px;
+  padding: 0 100px 0 100px !important;
 }
 .extrait .extrait__titre {
   font-size: 20px;
@@ -118,6 +120,73 @@ header img {
   color: white;
   border: 1px solid white;
   background-color: white;
+}
+
+.slick .slick__titre {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.slick .slick__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+.slick .slick-dots li button:before {
+  color: white !important;
+}
+.slick img {
+  width: 300px;
+}
+
+h3 {
+  background: #fff;
+  color: #3498db;
+  font-size: 36px;
+  line-height: 100px;
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+}
+
+.contact .col-8 {
+  overflow: hidden;
+  position: relative;
+}
+.contact .col-8 .contact__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+.contact .col-8 .bgImg {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+}
+
+.wrap {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(../imgs/banniereContact.png);
+  background-size: cover;
+}
+.wrap::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wrap button {
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

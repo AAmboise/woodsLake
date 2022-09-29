@@ -15,7 +15,7 @@
               <a class="nav-link " href="#extrait">Extrait</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#gallerie">Gallerie</a>
+              <a class="nav-link " href="#slick">Gallerie</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="#contact">Contact</a>

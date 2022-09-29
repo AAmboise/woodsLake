@@ -5,13 +5,14 @@
     $css= ' <link rel="stylesheet" href="./assets/css/style.css">';
     $menu= true;
     $activeContact = 'active';
+    $script ='';
     require_once './views/pages/contact.php';
     
     if (isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["email"]) && isset($_POST["message"])){
         newMessage();
     }
     else{
-        echo 'test';
+        // echo 'test';
     }
 
 
