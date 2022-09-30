@@ -16,6 +16,10 @@ ini_set('display_errors',true);
     <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css"/>
         <!-- Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css"/>
+    <!-- Lightbox -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/lightbox.min.css"/>
+
+
 
     <title><?=$titre?></title>
     <?=$css?>
@@ -53,6 +57,9 @@ ini_set('display_errors',true);
 <!-- SLICK -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <!-- <scrip type="text/javascript" src="../assets/js/slick/slick.min.js"></script> -->
+<!-- Lightbox -->
+<script src="../assets/js/lightbox.js"></script>
+
 
 <!-- SCRIPT SPECIFIQUE -->
 <?=$script?>
