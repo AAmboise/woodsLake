@@ -5,7 +5,7 @@
         </div>
         <div class="wrap">
             <button class="btn btn-lg btn-success">S'inscrire</button>
-            <button class="btn btn-lg btn-success">Nous contacter</button>
+            <a href="/contact"><button class="btn btn-lg btn-success">Nous contacter</button></a>
         </div>
 
     </div>

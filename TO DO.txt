@@ -3,6 +3,7 @@ Renommer les fichier photo et video avec https://www.php.net/base64_encode
 
 
 bug : 
+-empecher le refresh de la page contact form quand on soumet le form
 
 Création de page :
 - Inscription

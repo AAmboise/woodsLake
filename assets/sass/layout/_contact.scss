@@ -2,6 +2,7 @@
     .col-8{
         overflow: hidden;
         position: relative;
+        
         .contact__titre{
             .bande{
                 color: white;
@@ -10,15 +11,14 @@
     
             }
         }
-
-            .bgImg{
-                opacity: 0.6;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: auto;
-                height: 100%;
-            }
+        .bgImg{
+            opacity: 0.6;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: auto;
+            height: 100%;
+        }
         
     }
 

@@ -39,8 +39,11 @@
             </div>
 
             <div class="row mt-2">
-                <div class="col">
+                <div class="col-4">
                     <button class="btn btn-success">Envoyer</button>
+                </div>
+                <div class="col-8">
+                    <div><?=$alerte?></div>
                 </div>
             </div>
         </form>
