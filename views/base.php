@@ -31,7 +31,7 @@ ini_set('display_errors',true);
 
             <?php 
                 $menu ? require_once './views/template/nav.php' : false;
-                require_once './views/template/header.php';
+                $header ? require_once './views/template/header.php' : false;
             ?>
 
         <div class='row main'>

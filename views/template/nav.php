@@ -11,19 +11,19 @@
         <div class="collapse navbar-collapse " id="navbarNav">
           <ul class="navbar-nav  m-auto text-center">
             <li class="nav-item">
-              <a class="nav-link <?php if (isset($activeAccueil)){ $activeAccueil; } ?>" href="/home">Accueil</a>
+              <a class="nav-link <?php if (isset($activeAccueil)){ echo $activeAccueil; } ?>" href="/home">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if (isset($activeGroupe)){ $activeGroupe; } ?>" href="/groupe">Le groupe</a>
+              <a class="nav-link <?php if (isset($activeGroupe)){ echo $activeGroupe; } ?>" href="/groupe">Le groupe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if (isset($activeGallerie)){ $activeGallerie; } ?>" href="/gallerie">Gallerie</a>
+              <a class="nav-link <?php if (isset($activeGallerie)){ echo $activeGallerie; } ?>" href="/gallerie">Gallerie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if (isset($activeContact)){ $activeContact; } ?>" href="/contact">Nous contacter</a>
+              <a class="nav-link <?php if (isset($activeContact)){ echo $activeContact; } ?>" href="/contact">Nous contacter</a>
             </li>
             <li class="nav-item">
-              <button class="btn btn-lg btn-success" href="/contact">S'inscrire</button>
+              <a href="/connexion"><button class="btn btn-success">Se connecter</button></a>
             </li>
           </ul>
         </div>

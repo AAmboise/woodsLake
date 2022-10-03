@@ -1,8 +1,9 @@
 <?php
 
     $titre="Nous contacter";
-    $css= ' <link rel="stylesheet" href="./assets/css/style.css">';
-    $menu= true;
+    $css = ' <link rel="stylesheet" href="./assets/css/style.css">';
+    $menu = true;
+    $header = true;
     $activeContact = 'active';
     $script ='';
     $alerte = '';

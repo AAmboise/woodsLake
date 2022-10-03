@@ -6,10 +6,10 @@
     <div class="col-5 contactForm__card2 px-3">
         <form method="post">
             <div class="row contactForm__card2--titre">
-                <div class="col-12"><div>Formulaire de contact</div></div>
+                <div class="col-12"><div>Formulaire d'inscription</div></div>
             </div>
 
-            <div class="row mt-2">
+            <div class="row mt-2 my-3">
                 <div class="col-6 ">
                     <div><label for="nom">NOM</label></div>
                     <div><input type="text" name="nom" id="formulaire_nom" placeholder="Entrez votre prénom" required></div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="row mt-2">
+            <div class="row mt-2 my-3">
                 <div class="col-6">
                     <div><label for="email">EMAIL</label></div>
                     <div><input type="email" name="email" id="formulaire_email" placeholder="Entrez votre E-mail" required></div>  
@@ -31,18 +31,22 @@
                 </div>
             </div>
 
-            <div class="row mt-2">
-                <div class="col-12">
-                    <div><label for="message"> VOTRE MESSAGE</label></div>
-                    <div><textarea name="message" id="formulaire_message" cols="30" rows="10" placeholder="Entrez votre message" required></textarea></div>
+            <div class="row mt-2 my-3">
+                <div class="col-6">
+                    <div><label for="password">MOT DE PASSE</label></div>
+                    <div><input type="password" name="password" id="formulaire_password" placeholder="Entrez votre mot de passe" required ></div>
+                </div>
+                <div class="col-6">
+                    <div><label for="password">VALIDATION MOT DE PASSE</label></div>
+                    <div><input type="password2" name="password2" id="formulaire_password2" placeholder="Valider votre mot de passe" required ></div>
                 </div>
             </div>
 
-            <div class="row mt-2">
-                <div class="col-4">
-                    <button class="btn  btn-lg btn-success">Envoyer</button>
+            <div class="row mt-2 my-3">
+                <div class="col-12 text-center">
+                    <button class="btn btn-success">S'inscrire</button>
                 </div>
-                <div class="col-8">
+                <div class="col-12">
                     <div><?=$alerte?></div>
                 </div>
             </div>

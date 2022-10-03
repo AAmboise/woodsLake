@@ -1,17 +1,17 @@
-.contactForm{
-    .contactForm__card1{
+.connexionForm{
+    .connexionForm__card1{
         height: 600px;
         background-image: url(../imgs/banniereContactFull.jpg);
         background-size: cover;
         opacity: 0.9;
 
     }
-    .contactForm__card2--titre{
+    .connexionForm__card2--titre{
         margin: 40px 0 20px 0;
         font-size: 35px !important;
         font-weight: bold !important;
     }
-    .contactForm__card2{
+    .connexionForm__card2{
         background-color: white;
         color: black;
         padding: 0 4rem 0 4rem !important; //haut/droit/bas/gauche
