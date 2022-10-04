@@ -1,7 +1,6 @@
 <?php
 require_once './src/models/models.php';
 require_once 'UserDataBase.php';
-require_once 'ActuDataBase.php';
 require_once './src/configuration/configuration.php';
 
 class DataBase
@@ -19,18 +18,4 @@ class DataBase
         }
         return self::$pdo;
     }
-    /*
-    function pdo_connect()
-    {
-        $host="localhost";
-        $user="root";
-        $password="root";
-        $dbname="backoffice";
-        try {
-            return new PDO("mysql:host=$host;dbname=$dbname;carset=utf8",$user,$password);
-        } catch (PDOException $exception) {
-            $msgErreur =$exception->getMessage();
-            require_once './views/errors/template_affichage_error.php';
-        }
-    }*/
 }

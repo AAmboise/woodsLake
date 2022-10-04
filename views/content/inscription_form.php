@@ -4,9 +4,9 @@
     <div class=" col-5 contactForm__card1">
     </div>
     <div class="col-5 contactForm__card2 px-3">
-        <form method="post">
+        <form method="post" id="inscription_form">
             <div class="row contactForm__card2--titre">
-                <div class="col-12"><div>Formulaire d'inscription</div></div>
+                <div class="col-12 text-center"><div>Formulaire d'inscription</div></div>
             </div>
 
             <div class="row mt-2 my-3">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-6">
                     <div><label for="password">VALIDATION MOT DE PASSE</label></div>
-                    <div><input type="password2" name="password2" id="formulaire_password2" placeholder="Valider votre mot de passe" required ></div>
+                    <div><input type="password" name="password2" id="formulaire_password2" placeholder="Valider votre mot de passe" required ></div>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                     <button class="btn btn-success">S'inscrire</button>
                 </div>
                 <div class="col-12">
-                    <div><?=$alerte?></div>
+                    <div class="alerte"><?=$alerte?></div>
                 </div>
             </div>
         </form>

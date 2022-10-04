@@ -6,14 +6,19 @@ bug :
 - empecher le refresh de la page contact form quand on soumet le form (faire un traitement ajax et mettre un return false a la fin de la fonction)
 - mettre jquery et slick en local et pas en CDN
 
-Création de la BDD :
-- User (id / nom / prenom / email / telephone / password / isAdmin)
-- extraits (id / titre / URLfichier)
-- concerts (id / date / URLimage / lieux / heure)
-- photos (id / URLfichier / description)
-- reservation (id / id client / id concert / date)
+Création des COOKIES (Rgpd)
 
+INSCRIPTION : 
+- vérifier que le num de tel soit valide
+- vérifier que le mail est valide
+- crypter le mot de passe
 
+CONNEXION : 
+- redirection vers la page d'accueil
+
+NAVBAR :
+
+- bouton deconnexion
 
 Création de page :
 - crud Users

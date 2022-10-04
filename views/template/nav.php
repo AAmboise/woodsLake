@@ -22,9 +22,19 @@
             <li class="nav-item">
               <a class="nav-link <?php if (isset($activeContact)){ echo $activeContact; } ?>" href="/contact">Nous contacter</a>
             </li>
-            <li class="nav-item">
-              <a href="/connexion"><button class="btn btn-success">Se connecter</button></a>
-            </li>
+            
+              <?php 
+              // var_dump($_SESSION);
+                if (!empty($_SESSION)) {
+                  echo '<li>'.$_SESSION['prenom'].' '.$_SESSION['nom'].'</li>';
+                  echo '<li class="nav-item"><a href=""><button class="btn btn-success">Se déconnecter</button></a></li>';
+ 
+                }
+                else{
+                  echo '<li class="nav-item"><a href="/connexion"><button class="btn btn-success">Se connecter</button></a></li>';
+                }
+              ?>
+            
           </ul>
         </div>
       </div>

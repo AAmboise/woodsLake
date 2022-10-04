@@ -38,11 +38,10 @@ class UserDataBase
               'email'=>$email,
               'password'=>$password
           ]);
-          $tuple = $db->fetch();
-         // var_dump($tuple);
-          if ($tuple)
+          $req = $db->fetch();
+          if ($req)
               {
-                  $user = new User($tuple['pseudo'],$tuple['email'],$tuple['password'],$tuple['id']);
+                  $user = new User($req['pseudo'],$req['email'],$req['password'],$req['id']);
                   return $user;
               }
               else
@@ -51,7 +50,8 @@ class UserDataBase
       catch (PDOException $exception) 
       {
           $msgErreur =$exception->getMessage();
-          require_once './views/errors/template_affichage_error.php';
+          require_once './views/content/error.php';
+
       } 
     }
 }
