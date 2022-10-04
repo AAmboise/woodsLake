@@ -11,6 +11,61 @@ body {
   color: white;
 }
 
+@media (max-width: 576px) {
+  .concert__card--text {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  .concert__img img {
+    display: none;
+  }
+  .concert__card {
+    height: 100px;
+  }
+  .d-none {
+    display: block !important;
+  }
+  .displayRight {
+    display: none;
+  }
+  .contactForm__card2 {
+    padding: 0rem 1rem 0rem 1rem !important;
+  }
+  .contactForm__card2 input {
+    width: 100% !important;
+  }
+  .connexionForm__card2 {
+    padding: 0rem 1rem 0rem 1rem !important;
+  }
+  .connexionForm__card2 input {
+    width: 100% !important;
+  }
+}
+@media (max-width: 992px) {
+  .concert__card--text {
+    font-size: 20px !important;
+    margin-left: -50px !important;
+  }
+  .concert__card--text i {
+    display: none;
+  }
+  .extrait__card {
+    flex-direction: column;
+  }
+  .extrait__card audio {
+    margin-bottom: 10px;
+  }
+  .gallerie__card img {
+    padding: 10px;
+  }
+  .contactForm__card1 {
+    display: none;
+  }
+  .connexionForm__card1 {
+    display: none;
+  }
+}
 .main {
   min-height: 600px;
 }
@@ -115,7 +170,7 @@ header img {
 }
 .concerts .concert__card--text {
   font-size: 25px;
-  margin-left: -180px;
+  margin-left: -120px;
 }
 .concerts .concert__card--btn {
   margin-right: 50px;
@@ -155,6 +210,14 @@ h3 {
   padding: 2%;
   position: relative;
   text-align: center;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slide {
+  margin: 5px;
 }
 
 .contact .col-8 {
@@ -211,7 +274,7 @@ h3 {
 .contactForm .contactForm__card2 {
   background-color: white;
   color: black;
-  padding: 0 4rem 0 4rem !important;
+  padding: 0 4rem 0 4rem;
 }
 .contactForm .contactForm__card2 input {
   border-top: none;

@@ -3,7 +3,7 @@
 <div class="row connexionForm d-flex justify-content-center my-3">
     <div class=" col-5 connexionForm__card1">
     </div>
-    <div class="col-5 connexionForm__card2 px-3">
+    <div class="col-5 connexionForm__card2">
         <form method="post">
             <div class="row connexionForm__card2--titre">
                 <div class="col-12"><div>Formulaire de connexion</div></div>

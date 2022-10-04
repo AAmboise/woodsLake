@@ -1,5 +1,5 @@
 <?php
-$class = 'col-3 d-flex justify-content-center gallerie__card m-2'
+$class = 'col-lg-3 col-sm-5 col-7 d-flex justify-content-center gallerie__card m-2'
 ?>
 
 <div class="row text-center gallerie__mainTitre">

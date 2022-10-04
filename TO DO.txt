@@ -6,6 +6,8 @@ bug :
 - empecher le refresh de la page contact form quand on soumet le form (faire un traitement ajax et mettre un return false a la fin de la fonction)
 - mettre jquery et slick en local et pas en CDN
 
+Création de la BDD
+
 Création de page :
 - crud Users
 - crud extrait audio
@@ -16,7 +18,4 @@ Design :
 - ajout captcha contact form
 
 Responsive :
-- Accueil
 - contact
-- gallerie
-- groupe

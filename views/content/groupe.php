@@ -13,10 +13,10 @@
 </div>
 
 <div class="row groupe__card--portrait justify-content-center align-items-center left">
-    <div class="col-4 d-flex justify-content-center">
+    <div class="col-md-4 col-8 d-flex justify-content-center">
         <img src="../../assets/imgs/portraitVanessa.jpg" alt="">
     </div>
-    <div class="col-4 groupe__card--text">
+    <div class="col-md-4 col-8 groupe__card--text">
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos, tempore corporis aspernatur consequatur eius saepe dolor? Quia tenetur culpa quaerat quidem perspiciatis. Aperiam quis rem sint, porro ad id."
     </div>
 </div>
@@ -31,11 +31,14 @@
 </div>
 
 <div class="row groupe__card--portrait justify-content-center align-items-center right">
-    <div class="col-4 groupe__card--text">
+    <div class="col-md-4 col-8 groupe__card--text displayRight">
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos, tempore corporis aspernatur consequatur eius saepe dolor? Quia tenetur culpa quaerat quidem perspiciatis. Aperiam quis rem sint, porro ad id."
     </div>
-    <div class="col-4 d-flex justify-content-center">
+    <div class="col-md-4 col-8 d-flex justify-content-center">
         <img src="../../assets/imgs/portraitjerome.jpg" alt="">
+    </div>
+    <div class="col-md-4 col-8 groupe__card--text d-none">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos, tempore corporis aspernatur consequatur eius saepe dolor? Quia tenetur culpa quaerat quidem perspiciatis. Aperiam quis rem sint, porro ad id."
     </div>
 </div>
 
@@ -49,10 +52,10 @@
 </div>
 
 <div class="row groupe__card--portrait justify-content-center align-items-center left">
-    <div class="col-4 d-flex justify-content-center">
+    <div class="col-md-4 col-8 d-flex justify-content-center">
         <img src="../../assets/imgs/portraitmarco.jpg" alt="">
     </div>
-    <div class="col-4 groupe__card--text">
+    <div class="col-md-4 col-8 groupe__card--text">
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos, tempore corporis aspernatur consequatur eius saepe dolor? Quia tenetur culpa quaerat quidem perspiciatis. Aperiam quis rem sint, porro ad id."
     </div>
 </div>
@@ -67,11 +70,14 @@
 </div>
 
 <div class="row groupe__card--portrait justify-content-center align-items-center right">
-    <div class="col-4 groupe__card--text">
+    <div class="col-md-4 col-8 groupe__card--text displayRight">
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos, tempore corporis aspernatur consequatur eius saepe dolor? Quia tenetur culpa quaerat quidem perspiciatis. Aperiam quis rem sint, porro ad id."
     </div>
-    <div class="col-4 d-flex justify-content-center">
+    <div class="col-md-4 col-8 d-flex justify-content-center">
         <img src="../../assets/imgs/portraitFlo.jpg" alt="">
+    </div>
+    <div class="col-md-4 col-8 groupe__card--text d-none">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos, tempore corporis aspernatur consequatur eius saepe dolor? Quia tenetur culpa quaerat quidem perspiciatis. Aperiam quis rem sint, porro ad id."
     </div>
 </div>
 
@@ -85,10 +91,10 @@
 </div>
 
 <div class="row groupe__card--portrait justify-content-center align-items-center mb-3 left">
-    <div class="col-4 d-flex justify-content-center">
+    <div class="col-md-4 col-8 d-flex justify-content-center">
         <img src="../../assets/imgs/portraitJl.jpg" alt="">
     </div>
-    <div class="col-4 groupe__card--text">
+    <div class="col-md-4 col-8 groupe__card--text">
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quos, tempore corporis aspernatur consequatur eius saepe dolor? Quia tenetur culpa quaerat quidem perspiciatis. Aperiam quis rem sint, porro ad id."
     </div>
 </div>

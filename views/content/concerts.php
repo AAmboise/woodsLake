@@ -4,7 +4,7 @@ $date = '28 mars 2022';
 ?>
 
 <div class="row concerts justify-content-center text-start my-3">
-    <div class="col-8">
+    <div class="col-lg-8 col-12">
         <div class="concert__titre">
             <div id="concert">Prochain concerts</div>
             <div class="bande"></div>
