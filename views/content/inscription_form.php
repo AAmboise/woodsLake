@@ -12,11 +12,11 @@
             <div class="row mt-2 my-3">
                 <div class="col-6 ">
                     <div><label for="nom">NOM</label></div>
-                    <div><input type="text" name="nom" id="formulaire_nom" placeholder="Entrez votre prénom" required></div>
+                    <div><input type="text" name="nom" id="formulaire_nom" placeholder="Entrez votre nom" required></div>
                 </div>
                 <div class="col-6">
                     <div><label for="prenom">PRENOM</label></div>
-                    <div><input type="text" name="prenom" id="formulaire_prenom" placeholder="Entrez votre nom" required></div>
+                    <div><input type="text" name="prenom" id="formulaire_prenom" placeholder="Entrez votre prénom" required></div>
                 </div>
             </div>
 

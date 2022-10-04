@@ -5,14 +5,16 @@ class UserDataBase
     {
       try
       {
-        $sql= "INSERT INTO `user`(`pseudo`, `email`, `password`,`isAdmin`) 
-          VALUES (:pseudo,:email,:password,:isAdmin);";
+        $sql= "INSERT INTO `user`(`nom`, `prenom`,`email`, `telephone`,`password`,`isAdmin`) 
+          VALUES (:nom,:prenom,:email,:telephone,:password,:isAdmin);";
           $db=DataBase::getPDO()->prepare($sql);
           // les parties variables marquées par : sont remplacées grace a un tableau associatif!
           // cela protège de l'injection SQL
           $db->execute([
-              'pseudo'=>$user->pseudo,
+              'nom'=>$user->nom,
+              'prenom'=>$user->prenom,
               'email'=>$user->email,
+              'telephone'=>$user->telephone,
               'password'=>$user->password,
               'isAdmin'=>0
           ]);
@@ -20,7 +22,7 @@ class UserDataBase
       catch (PDOException $exception) 
       {
           $msgErreur =$exception->getMessage();
-          require_once './views/errors/template_affichage_error.php';
+          require_once './views/content/error.php';
       } 
     }
     public static function checkLogin($email,$password)

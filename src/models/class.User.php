@@ -2,14 +2,20 @@
 
     class User{
 
-        private int $id;
-        public string $pseudo;
-        private string $password;
-        private  bool $isAdmin;
+        public $id;
+        public $nom;
+        public $prenom;
+        public $email;
+        public $telephone;
+        public $password;
+        public $isAdmin;
 
-        public function __construct($Id, $Pseudo,$Password,$IsAdmin=0){
+        public function __construct($Id,$nom,$prenom,$email,$telephone,$Password,$IsAdmin=0){
             $this->id = (int)$Id;
-            $this->pseudo = $Pseudo;
+            $this->nom = $nom;
+            $this->prenom = $prenom;
+            $this->email = $email;
+            $this->telephone = $telephone;
             $this->password = $Password;
             $this->isAdmin = (int)$IsAdmin;
         }
@@ -23,11 +29,38 @@
             return $this;
         }
 
-        public function getPseudo(){
-            return $this->pseudo;
+        public function getNom(){
+            return $this->nom;
         }
-        public function setPseudo(string $pseudo): string {
-            $this->pseudo = $pseudo;
+        public function setNom(string $nom): string {
+            $this->nom = $nom;
+     
+            return $this;
+        }
+
+        public function getPrenom(){
+            return $this->prenom;
+        }
+        public function setPrenom(string $prenom): string {
+            $this->prenom = $prenom;
+     
+            return $this;
+        }
+
+        public function getEmail(){
+            return $this->email;
+        }
+        public function setEmail(string $email): string {
+            $this->email = $email;
+     
+            return $this;
+        }
+
+        public function getTelephone(){
+            return $this->telephone;
+        }
+        public function setTelephone(string $telephone): string {
+            $this->telephone = $telephone;
      
             return $this;
         }

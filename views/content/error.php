@@ -1,0 +1,1 @@
+<div>erreur : <?=$msgErreur?></div>

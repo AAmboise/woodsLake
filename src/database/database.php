@@ -1,8 +1,8 @@
 <?php
-require_once './models/models.php';
+require_once './src/models/models.php';
 require_once 'UserDataBase.php';
 require_once 'ActuDataBase.php';
-require_once './configuration/configuration.php';
+require_once './src/configuration/configuration.php';
 
 class DataBase
 {

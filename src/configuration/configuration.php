@@ -11,16 +11,15 @@ public static function get($nom, $valeurParDefaut = null) {
   else {
     $valeur = $valeurParDefaut;
   }
-  //var_dump($valeur);
   return $valeur;
 }
 
 // Renvoie le tableau des paramètres en le chargeant au besoin
 private static function getParametres() {
   if (self::$parametres == null) {
-    $cheminFichier = "./configuration/prod.ini";
+    $cheminFichier = "./src/configuration/prod.ini";
     if (!file_exists($cheminFichier)) {
-      $cheminFichier = "./configuration/dev.ini";
+      $cheminFichier = "./src/configuration/dev.ini";
     }
     if (!file_exists($cheminFichier)) {
       throw new Exception("Aucun fichier de configuration trouvé");
