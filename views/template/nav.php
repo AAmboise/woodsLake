@@ -2,7 +2,7 @@
   <div class="col-1">
     <a href="/accueil"><img src="../../assets/imgs/banniereWoodsLake2.png" alt=""></a>
   </div>
-  <div class=" col-sm-10 col-md-8">
+  <div class=" col-sm-10 col-md-9">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid justify-content-evenly">
         <button class="navbar-toggler text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
