@@ -8,6 +8,7 @@
     $css = '<link rel="stylesheet" href="./assets/css/style.css">';
     $menu = true;
     $header = false;
+    $activeCompte = 'active';
     $script = '<script type="text/javascript" src="../assets/js/compte.js"></script>';
     $alerte = '';
     
