@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse " id="navbarNav">
           <ul class="navbar-nav  m-auto text-center">
             <li class="nav-item">
-              <a class="nav-link <?php if (isset($activeAccueil)){ echo $activeAccueil; } ?>" href="/home">Accueil</a>
+              <a class="nav-link <?php if (isset($activeAccueil)){ echo $activeAccueil; } ?>" href="/accueil">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php if (isset($activeGroupe)){ echo $activeGroupe; } ?>" href="/groupe">Le groupe</a>
@@ -27,7 +27,7 @@
               // var_dump($_SESSION);
                 if (!empty($_SESSION)) {
                   echo '<li>'.$_SESSION['prenom'].' '.$_SESSION['nom'].'</li>';
-                  echo '<li class="nav-item"><a href=""><button class="btn btn-success">Se déconnecter</button></a></li>';
+                  echo '<li class="nav-item"><a href="/deconnexion"><button class="btn btn-success">Se déconnecter</button></a></li>';
  
                 }
                 else{

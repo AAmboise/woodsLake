@@ -3,15 +3,14 @@ Renommer les fichier photo et video avec https://www.php.net/base64_encode
 
 
 bug : 
-- empecher le refresh de la page contact form quand on soumet le form (faire un traitement ajax et mettre un return false a la fin de la fonction)
 - mettre jquery et slick en local et pas en CDN
 
 Création des COOKIES (Rgpd)
 
 INSCRIPTION : 
-- vérifier que le num de tel soit valide
 - vérifier que le mail est valide
 - crypter le mot de passe
+- verifier que le compte n'exite pas
 
 CONNEXION : 
 - redirection vers la page d'accueil

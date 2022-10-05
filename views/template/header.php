@@ -1,5 +1,5 @@
 
-<!-- <div>Slider</div> -->
+
 <div class="row header">
     <div class="col">
     <div id="carouselHeader" class="carousel slide carousel-fade" data-bs-ride="carousel">

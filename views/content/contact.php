@@ -4,7 +4,7 @@
             <div class="bande"></div>
         </div>
         <div class="wrap">
-            <a href="/connexion"><button class="btn btn-lg btn-success">S'inscrire</button></a>
+            <a href="/connexion"><button class="btn btn-lg btn-success">Se connecter</button></a>
             <a href="/contact"><button class="btn btn-lg btn-success">Nous contacter</button></a>
         </div>
 
