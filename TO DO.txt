@@ -12,13 +12,6 @@ INSCRIPTION :
 - crypter le mot de passe
 - verifier que le compte n'exite pas
 
-CONNEXION : 
-- redirection vers la page d'accueil
-
-NAVBAR :
-
-- bouton deconnexion
-
 Création de page :
 - crud Users
 - crud extrait audio
@@ -30,3 +23,4 @@ Design :
 
 Responsive :
 - contact
+- tout checker

@@ -27,6 +27,9 @@ switch($path){
     case '/deconnexion':
         require_once 'src/controllers/deconnexionController.php';
     break;
+    case '/compte':
+        require_once 'src/controllers/compteController.php';
+    break;
     default:
     header('location:/accueil');
     break;

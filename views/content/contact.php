@@ -4,7 +4,14 @@
             <div class="bande"></div>
         </div>
         <div class="wrap">
-            <a href="/connexion"><button class="btn btn-lg btn-success">Se connecter</button></a>
+        <?php
+        if (!empty($_SESSION)) {
+                  echo '<a href="/compte"><button class="btn btn-lg btn-success">Mon compte</button></a>';
+                }
+                else{
+                  echo '<a href="/connexion"><button class="btn btn-lg btn-success">Se connecter</button></a>';
+                }
+            ?>
             <a href="/contact"><button class="btn btn-lg btn-success">Nous contacter</button></a>
         </div>
 

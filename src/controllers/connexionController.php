@@ -23,6 +23,8 @@
             $_SESSION['isAdmin']= $userConnected->getIsAdmin();
             $_SESSION['prenom']= $userConnected->prenom;
             $_SESSION['nom']= $userConnected->nom;
+            $_SESSION['email']= $userConnected->email;
+            $_SESSION['telephone']= $userConnected->telephone;
 
             header('location: /accueil');   
         }

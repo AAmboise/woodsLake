@@ -24,9 +24,9 @@
             </li>
             
               <?php 
-              // var_dump($_SESSION);
                 if (!empty($_SESSION)) {
                   echo '<li>'.$_SESSION['prenom'].' '.$_SESSION['nom'].'</li>';
+                  echo '<li class="nav-item"><a class="nav-link <?php if (isset($activeCompte)){ echo $activeCompte; } ?>" href="/compte">Mon compte</a></li>';
                   echo '<li class="nav-item"><a href="/deconnexion"><button class="btn btn-success">Se déconnecter</button></a></li>';
  
                 }
