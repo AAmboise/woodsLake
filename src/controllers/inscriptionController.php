@@ -1,7 +1,9 @@
 <?php
+
 require_once './src/models/models.php';
 require_once './src/database/UserDataBase.php';
 require_once './src/database/database.php';
+require_once './src/ajax/ajax.php';
 
 session_start();
 $titre = "Connexion";
@@ -22,9 +24,12 @@ if( !empty($_POST['nom']) &&
 
     if($_POST['password'] == $_POST['password2']){ // passwords identique
         if(preg_match('`[0-9]{10}`',str_replace(' ','',$_POST['telephone']))){ // verifie le format telephonne
-            $user = new User(null, $_POST['nom'],$_POST['prenom'],$_POST['email'],str_replace(' ','',$_POST['telephone']),$_POST['password'],0);
-            UserDataBase::create($user);
-            header('location: /connexion');
+            $unique = UserDataBase::checkemail($_POST['email']);
+            if($unique){ // on vérifie que l'email n'existe pas
+                $user = new User(null, $_POST['nom'],$_POST['prenom'],$_POST['email'],str_replace(' ','',$_POST['telephone']),$_POST['password'],0);
+                UserDataBase::create($user);
+                header('location: /connexion');
+            }
         }
         
     }
@@ -32,6 +37,5 @@ if( !empty($_POST['nom']) &&
 }
 
 require_once './views/pages/inscription.php';
-
 ?>
 

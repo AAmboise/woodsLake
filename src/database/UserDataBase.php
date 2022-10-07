@@ -47,7 +47,28 @@ class UserDataBase {
       }
       catch (PDOException $exception) {
           $msgErreur =$exception->getMessage();
-          require_once './views/errors/template_affichage_error.php';
+          require_once './views/content/error.php';
       } 
+    }
+
+    public static function checkemail($email){
+      try {
+        $sql= "SELECT COUNT(id) FROM `user` where email like :email;";
+        $db=DataBase::getPDO()->prepare($sql);
+        // les parties variables marquées par : sont remplacées grace a un tableau associatif!
+        // cela protège de l'injection SQL
+        $db->execute(['email'=>$email]);
+        $req = $db->fetchColumn(); // retourn un boolean
+        if(!$req) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+      catch (PDOException $exception) {
+        $msgErreur =$exception->getMessage();
+        require_once './views/content/error.php';
+    } 
     }
 }

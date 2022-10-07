@@ -2,6 +2,7 @@
 namespace src\controllers;
 
 use src\models\User;
+
 session_start();
 $titre = "Accueil";
 $css = '<link rel="stylesheet" href="./assets/css/style.css">';

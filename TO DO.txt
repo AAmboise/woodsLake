@@ -7,8 +7,10 @@ bug :
 
 Création des COOKIES (Rgpd)
 
+NameSpace et USE dans les controllers
+
 INSCRIPTION : 
-- vérifier que le mail est valide
+- vérifier que le mail est valide en js (fait en php) (creer fichier ajax qui récupere les infos au chargement de la page)
 - crypter le mot de passe
 - verifier que le compte n'exite pas
 
