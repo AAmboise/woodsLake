@@ -58,7 +58,7 @@ $(document).ready(function(){
             url : "./src/ajax/listeEmail.json",
             method: "GET",
             dataType : "json",
-            async : false,
+            async : false, // necessaire pour faire sortir les infos de l'ajax
         })
         .done(function(response) {
             var uniqueEmail = true;
@@ -67,7 +67,7 @@ $(document).ready(function(){
                     uniqueEmail = false
                 }
             })
-            result = ajaxOut(uniqueEmail)
+            result = ajaxOut(uniqueEmail) // necessaire pour faire sortir les infos de l'ajax
         })
         return result
     }
