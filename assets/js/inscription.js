@@ -7,7 +7,7 @@ $(document).ready(function(){
 	/*********
 	* OnLoad
 	**********/
-    
+
 	/*********
      * Events
      **********/
@@ -25,8 +25,13 @@ $(document).ready(function(){
 
                 if($('#formulaire_telephone').val().replaceAll(" ","").length == 10 && !isNaN($('#formulaire_telephone').val().replaceAll(" ",""))){ // phone a 10 chiffres et pas de lettres
                     
-                    verifEmail($('#formulaire_email').val());
-                    
+                    if (verifEmail($('#formulaire_email').val())){ // on vérifie que l'email n'est pas déja pris
+                        return true;
+                    }
+                    else{
+                        $('.alerte').addClass('text-danger text-center fw-bold mt-3').html('l\'email est déjà pris')
+                        return false
+                    } 
                 }
                 else{ // si le format telephone n'est pas bon
                     $('.alerte').addClass('text-danger text-center fw-bold mt-3').html('format accepté (0606060606 ou 06 06 06 06 06)')
@@ -48,45 +53,31 @@ $(document).ready(function(){
     /*********
     * Fonctions
     **********/
-    function verifEmail(email){  // return 2 si le mail existe déja et 1 si le mail n'existe pas
-
+    function verifEmail(email){  // return false si le mail existe déja et true si le mail n'existe pas
         $.ajax({
-            url: './src/ajax/listeEmail.json',
-            method: "post",
+            url : "./src/ajax/listeEmail.json",
+            method: "GET",
             dataType : "json",
-            success : function(response){
-                        var uniqueEmail = 1;
-                        $.each(response, function(i, value){
-                            if(email == value){
-                                uniqueEmail = 2;
-                            };
-                        });
-                        if(uniqueEmail == 1){ // si le mail n'est pas déjà pris
-                            alert('vide')
-                            console.log('vide :'+uniqueEmail);
-                            // return true;  
-                        }
-                        else{ // si l'email est déjà pris
-                            $('.alerte').addClass('text-danger text-center fw-bold mt-3').html('l\'email est déjà pris')
-                            alert('déja pris')
-                            console.log('pris :'+ uniqueEmail);
-                            // return false;
-                        }
-                        // return boolrrrr(uniqueEmail);
-
-                    }
-                    
-                });
-    
-                // return uniqueEmail
-        
+            async : false,
+        })
+        .done(function(response) {
+            var uniqueEmail = true;
+            $.each(response,function(i, value){
+                if (email == value){
+                    uniqueEmail = false
+                }
+            })
+            result = ajaxOut(uniqueEmail)
+        })
+        return result
     }
-    function boolrrrr(result){
-        if (result == 1){
-            return true
+
+    function ajaxOut(result){
+        if(result == true){
+            return true;
         }
         else{
-            return false
+            return false;
         }
     }
 
