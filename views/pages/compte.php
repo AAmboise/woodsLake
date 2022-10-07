@@ -5,7 +5,7 @@ ob_start();
 <div class="container">
     <?php
         require_once './views/content/infoCompte.php';
-        require_once './views/content/infoResa.php';
+        // require_once './views/content/infoResa.php';
     ?>
 </div>
 

@@ -1,14 +1,10 @@
 <?php
 class UserDataBase {
-    public static function create ($user)
-    {
-      try
-      {
+    public static function create ($user){
+      try{
         $sql= "INSERT INTO `user`(`nom`, `prenom`,`email`, `telephone`,`password`,`isAdmin`) 
-          VALUES (:nom,:prenom,:email,:telephone,:password,:isAdmin);";
-          $db=DataBase::getPDO()->prepare($sql);
-          // les parties variables marquées par : sont remplacées grace a un tableau associatif!
-          // cela protège de l'injection SQL
+          VALUES (:nom,:prenom,:email,:telephone,:password,:isAdmin);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
+          $db=DataBase::getPDO()->prepare($sql);   // (cela protège de l'injection SQL)
           $db->execute([
               'nom'=>$user->nom,
               'prenom'=>$user->prenom,
@@ -18,12 +14,39 @@ class UserDataBase {
               'isAdmin'=>0
           ]);
       }
-      catch (PDOException $exception) 
-      {
-          $msgErreur =$exception->getMessage();
+      catch (PDOException $exception){
+          $msgErreur = $exception->getMessage();
           require_once './views/content/error.php';
       } 
     }
+
+    public static function update ($userID, $colonne, $value){
+      try{
+        $sql= "UPDATE `user`
+          SET $colonne = '$value' 
+          WHERE `id` = $userID;";
+          $db=DataBase::getPDO()->prepare($sql);
+          $db->execute();
+      }
+      catch (PDOException $exception){
+          $msgErreur = $exception->getMessage();
+          require_once './views/content/error.php';
+      } 
+    }
+
+    public static function delete ($userID){
+      try{
+        $sql= "DELETE FROM `user` 
+          WHERE `id` = $userID;";
+          $db=DataBase::getPDO()->prepare($sql);
+          $db->execute();
+      }
+      catch (PDOException $exception){
+          $msgErreur = $exception->getMessage();
+          require_once './views/content/error.php';
+      } 
+    }
+
     public static function checkLogin($email,$password) {
       try {
         $sql= "SELECT * from `user` 

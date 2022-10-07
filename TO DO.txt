@@ -9,13 +9,14 @@ Création des COOKIES (Rgpd)
 
 NameSpace et USE dans les controllers
 
+CONNEXION
+- message JS si le compte n'existe pas
+
 INSCRIPTION : 
-- vérifier que le mail est valide en js (fait en php) (creer fichier ajax qui récupere les infos au chargement de la page)
 - crypter le mot de passe
-- verifier que le compte n'exite pas
 
 Création de page :
-- crud Users
+
 - crud extrait audio
 - Crud photo
 - réservation de place

@@ -3,7 +3,7 @@
     <div class=" col-5 infoCompteForm__card1">
     </div>
     <div class="col-5 infoCompteForm__card2">
-        <form method="post">
+        <form method="post" id="modification_form">
             <div class="row infoCompteForm__card2--titre">
                 <div class="col-12"><div>Mes informations personelles</div></div>
             </div>
@@ -52,12 +52,33 @@
                     <button class="btn btn-lg btn-success modifInfo__btn">Modifier</button>
                 </div>
             </div>
+            <div class="col-12">
+                    <div class="alerte"><?=$alerte?></div>
+            </div>
         </form>
             <div class="row mt-2 my-3">
                 <div class="col-12 text-center d-flex justify-content-evenly">
                     <button class="btn btn-lg btn-success modifCompte">Modifier mes informations</button>
-                    <button class="btn btn-lg btn-danger supprCompte">Supprimer mon compte</button>
+                    <button type="button" class="btn btn-lg btn-danger supprCompte" data-bs-toggle="modal" data-bs-target="#usersuppr">Supprimer mon compte</button>
                 </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="usersuppr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Confirmation de suppression</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Êtes vous sûr de vouloir supprimer votre compte ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Annuler</button>
+                    <a href="/suppression"><button type="button" class="btn btn-danger">Supprimer le compte</button></a>
+                </div>
+                </div>
+            </div>
             </div>
         
     </div>

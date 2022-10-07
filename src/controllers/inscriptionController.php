@@ -26,7 +26,7 @@ if( !empty($_POST['nom']) &&
         if(preg_match('`[0-9]{10}`',str_replace(' ','',$_POST['telephone']))){ // verifie le format telephonne
             $unique = UserDataBase::checkemail($_POST['email']);
             if($unique){ // on vérifie que l'email n'existe pas
-                $user = new User(null, $_POST['nom'],$_POST['prenom'],$_POST['email'],str_replace(' ','',$_POST['telephone']),$_POST['password'],0);
+                $user = new User(null, strtoupper($_POST['nom']),ucwords($_POST['prenom']),$_POST['email'],str_replace(' ','',$_POST['telephone']),$_POST['password'],0);
                 UserDataBase::create($user);
                 header('location: /connexion');
             }

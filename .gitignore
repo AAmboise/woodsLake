@@ -1,3 +1,4 @@
 /node_module
 /.htaccess
 /.dev.ini
+src/ajax/listeEmail.json

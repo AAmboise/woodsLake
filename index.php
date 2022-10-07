@@ -27,6 +27,9 @@ switch($path){
     case '/deconnexion':
         require_once 'src/controllers/deconnexionController.php';
     break;
+    case '/suppression':
+        require_once 'src/controllers/suppressionController.php';
+    break;
     case '/compte':
         require_once 'src/controllers/compteController.php';
     break;
