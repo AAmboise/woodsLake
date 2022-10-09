@@ -16,9 +16,9 @@ INSCRIPTION :
 Création de page :
 
 - Administration
-    - cud extrait audio
-    - cud concerts
-    - Cud photo
+    - cud extrait audio (encodage base64)
+    - cud concerts (Formatage automatique de la photo "caré" + encodage base64)
+    - Cud photo (Formatage automatique de la photo + encodage base64)
 
 - réservation de place
 
@@ -29,4 +29,4 @@ Responsive :
 - contact
 - tout checker
 
-Design concerts a revoir
+
