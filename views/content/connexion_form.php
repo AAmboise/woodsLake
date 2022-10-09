@@ -4,7 +4,7 @@
     <div class=" col-5 connexionForm__card1">
     </div>
     <div class="col-5 connexionForm__card2">
-        <form method="post">
+        <form method="post" id="connexion_form">
             <div class="row connexionForm__card2--titre">
                 <div class="col-12"><div>Formulaire de connexion</div></div>
             </div>
@@ -28,7 +28,7 @@
                     <button class="btn btn-success">Se connecter</button>
                 </div>
                 <div class="col-8">
-                    <div><?=$alerte?></div>
+                    <div class="alerte"><?=$alerte?></div>
                 </div>
             </div>
         </form>

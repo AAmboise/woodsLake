@@ -1,4 +1,15 @@
-
+<?php
+    $nom = '';
+    $prenom = '';
+    $telephone ='';
+    $email = '';
+    if ($_SESSION){
+        $nom = 'value="'.$_SESSION['nom'].'"';
+        $prenom = 'value="'.$_SESSION['prenom'].'"';
+        $telephone = 'value="'.$_SESSION['telephone'].'"';
+        $email = 'value="'.$_SESSION['email'].'"';
+    }
+?>
 
 <div class="row  contactForm d-flex justify-content-center my-3">
     <div class="col-5 contactForm__card1">
@@ -12,22 +23,22 @@
             <div class="row mt-2">
                 <div class="col-md-6 col-12">
                     <div><label for="nom">NOM</label></div>
-                    <div><input type="text" name="nom" id="formulaire_nom" placeholder="Entrez votre prénom" required></div>
+                    <div><input type="text" name="nom" id="formulaire_nom" placeholder="Entrez votre prénom" <?=$nom?> onFocus="this.value='';" required></div>
                 </div>
                 <div class="col-md-6 col-12">
                     <div><label for="prenom">PRENOM</label></div>
-                    <div><input type="text" name="prenom" id="formulaire_prenom" placeholder="Entrez votre nom" required></div>
+                    <div><input type="text" name="prenom" id="formulaire_prenom" placeholder="Entrez votre nom" <?=$prenom?> onFocus="this.value='';" required></div>
                 </div>
             </div>
 
             <div class="row mt-2">
                 <div class="col-md-6 col-12">
                     <div><label for="email">EMAIL</label></div>
-                    <div><input type="email" name="email" id="formulaire_email" placeholder="Entrez votre E-mail" required></div>  
+                    <div><input type="email" name="email" id="formulaire_email" placeholder="Entrez votre E-mail" <?=$email?> onFocus="this.value='';" required></div>  
                 </div>
                 <div class="col-md-6 col-12">
                     <div><label for="telephone">TELEPHONE</label></div>
-                    <div><input type="text" name="telephone" id="formulaire_telephone" placeholder="Entrez votre téléphone" required ></div>
+                    <div><input type="text" name="telephone" id="formulaire_telephone" placeholder="Entrez votre téléphone" <?=$telephone?> onFocus="this.value='';" required></div>
                 </div>
             </div>
 

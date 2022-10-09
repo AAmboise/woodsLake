@@ -2,23 +2,24 @@
 Renommer les fichier photo et video avec https://www.php.net/base64_encode
 
 
-bug : 
-- mettre bottstrap en local et pas en CDN
-
+BONUS : 
 Création des COOKIES (Rgpd)
 
 NameSpace et USE dans les controllers
 
 CONNEXION
-- message JS si le compte n'existe pas
+- Vérification ( correspondance email/password)
 
 INSCRIPTION : 
 - crypter le mot de passe
 
 Création de page :
 
-- crud extrait audio
-- Crud photo
+- Administration
+    - cud extrait audio
+    - cud concerts
+    - Cud photo
+
 - réservation de place
 
 Design : 
@@ -27,3 +28,5 @@ Design :
 Responsive :
 - contact
 - tout checker
+
+Design concerts a revoir

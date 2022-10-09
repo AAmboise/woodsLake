@@ -3,7 +3,7 @@
 require_once './src/models/models.php';
 require_once './src/database/UserDataBase.php';
 require_once './src/database/database.php';
-require_once './src/ajax/ajax.php';
+require_once './src/ajax/ajax.php'; 
 
 session_start();
 $titre = "Connexion";

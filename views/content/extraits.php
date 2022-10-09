@@ -8,20 +8,17 @@ $classCard = '"extrait__card d-flex justify-content-between my-2 align-items-cen
             <div class="bande"></div>
         </div>
 
-        <div class=<?=$classCard?>>
-            <div>Woods Lake : Phill Collins</div>
-            <audio controls src="../../upload/audio1.mp3"></audio>
-        </div>
+<?php
+    $extraits = ExtraitDataBase::read();
+    foreach ($extraits as $extrait){
+        // $extrait = new Extrait(null,$extrait['titre'],$extrait['URLFichier']);
+        echo '<div class='.$classCard.'>
+            <div>Woods Lake : '.$extrait['titre'].'</div>
+            <audio controls src="../../upload/'.$extrait['URLFichier'].'"></audio>
+        </div>';
+    }
+?>
 
-        <div class=<?=$classCard?>>
-            <div>Woods Lake : The wall</div>
-            <div><audio controls src="../../upload/audio2.mp3"></audio></div>
-        </div>
-
-        <div class=<?=$classCard?>>
-            <div>Woods Lake : Phill Collins</div>
-            <audio controls src="../../upload/audio1.mp3"></audio>
-        </div>
 
     </div>
 </div>

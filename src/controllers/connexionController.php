@@ -8,7 +8,7 @@
     $css = '<link rel="stylesheet" href="./assets/css/style.css">';
     $menu = true;
     $header = true;
-    $script = '';
+    $script = '<script type="text/javascript" src="../assets/js/connexion.js"></script>';
     $alerte = '';
     
     
@@ -18,7 +18,6 @@
         
         if ($userConnected == true) { // si l'utilisateur est reconnu dans la BDD, on creer la session
 
-            $_SESSION['isConnected']=true;
             $_SESSION['id']= $userConnected->getId();
             $_SESSION['isAdmin']= $userConnected->getIsAdmin();
             $_SESSION['prenom']= $userConnected->prenom;

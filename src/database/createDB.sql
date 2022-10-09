@@ -21,7 +21,7 @@ CREATE TABLE `concert` ( -- CREATION DE LA TABLE
     `ID` int(35) NOT NULL AUTO_INCREMENT,
     `date` date NOT NULL,
     `URLImage` varchar(255) NOT NULL,
-    `lieux` varchar(255) NOT NULL,
+    `lieu` varchar(255) NOT NULL,
     `heure` varchar(255) NOT NULL,
     PRIMARY KEY(`ID`) 
 );

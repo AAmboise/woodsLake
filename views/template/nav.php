@@ -28,6 +28,9 @@
                   echo '<li>'.$_SESSION['prenom'].' '.$_SESSION['nom'].'</li>';
                   echo '<li class="nav-item"><a class="nav-link'?> <?php if (isset($activeCompte)){ echo $activeCompte; } ?><?php echo '" href="/compte">Mon compte</a></li>';
                   echo '<li class="nav-item"><a href="/deconnexion"><button class="btn btn-success">Se déconnecter</button></a></li>';
+                  if ($_SESSION['isAdmin']){
+                  echo '<li class="nav-item"><a href="/administration"><button class="btn btn-info"><i class="fa fa-gear"></i></button></a></li>';
+                  }
  
                 }
                 else{

@@ -2,9 +2,9 @@
 
     class Extrait{
 
-        private int $id;
-        private string $titre;
-        private string $fichier;
+        public int $id;
+        public string $titre;
+        public string $fichier;
 
         function __construct($id, $titre, $fichier){
             $this->id = (int)$id;
@@ -15,7 +15,7 @@
         public function getId(): int{
             return $this->id;
         }
-        public function setId(int $id): int {
+        public function setId(int $id) {
             $this->id = $id;
      
             return $this;
@@ -24,7 +24,7 @@
         public function getTitre(){
             return $this->id;
         }
-        public function setTitre(string $titre): string {
+        public function setTitre(string $titre) {
             $this->titre = $titre;
 
             return $this;
@@ -33,7 +33,7 @@
         public function getFichier(){
             return $this->fichier;
         }
-        public function setFichier(string $fichier): string {
+        public function setFichier(string $fichier) {
             $this->fichier = $fichier;
 
             return $this;

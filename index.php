@@ -33,6 +33,9 @@ switch($path){
     case '/compte':
         require_once 'src/controllers/compteController.php';
     break;
+    case '/administration':
+        require_once 'src/controllers/adminController.php';
+    break;
     default:
     header('location:/accueil');
     break;

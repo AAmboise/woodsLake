@@ -3,51 +3,32 @@
     class Concert{
 
         private int $id;
-        private string $titre;
-        private string $nom;
         private string $date;
         private string $lieu;
-        private string $photo;
-        private string $lien;
+        private string $heure;
+        private string $image;
 
-        public function __construct($pId=0, $titre, $nom, $date, $lieu, $photo, $lien){
-            $this->id = (int)$Id;
-            $this->titre = $titre;
-            $this->nom = $nom;
+
+        public function __construct($id=0, $date, $lieu, $heure, $image){
+            $this->id = (int)$id;
             $this->date = $date;
             $this->lieux = $lieu;
-            $this->photo = $photo;
-            $this->lien = $lien;
+            $this->lieux = $heure;
+            $this->image = $image;
         }
 
         public function getId(){
             return $this->id;
         }
-        public function setId(int $id): int {
+        public function setId(int $id) {
             $this->id = $id;
-            return $this;
-        }
-
-        public function getTitre(){
-            return $this->titre;
-        }
-        public function setTitre(string $titre): string {
-            $this->titre = $titre;
-            return $this;
-        }
-
-        public function getNom(){
-            return $this->nom;
-        }
-        public function setNom(string $nom): string {
-            $this->nom = $nom;
             return $this;
         }
 
         public function getDate(){
             return $this->date;
         }
-        public function setDate(string $date): string {
+        public function setDate(string $date) {
             $this->date = $date;
             return $this;
         }
@@ -55,24 +36,24 @@
         public function getLieu(){
             return $this->lieu;
         }
-        public function setLieu(string $lieu): string {
+        public function setLieu(string $lieu) {
             $this->lieu = $lieu;
             return $this;
         }
 
-        public function getPhoto(){
-            return $this->photo;
+        public function getHeure(){
+            return $this->heure;
         }
-        public function setPhoto(string $photo): string {
-            $this->photo = $photo;
+        public function setHeure(string $heure) {
+            $this->heure = $heure;
             return $this;
         }
 
-        public function getLien(){
-            return $this->lien;
+        public function getimage(){
+            return $this->image;
         }
-        public function setLien(string $lien): string {
-            $this->lien = $lien;
+        public function setimage(string $image) {
+            $this->image = $image;
             return $this;
         }
     }
