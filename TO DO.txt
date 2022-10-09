@@ -3,7 +3,7 @@ Renommer les fichier photo et video avec https://www.php.net/base64_encode
 
 
 bug : 
-- mettre jquery et slick en local et pas en CDN
+- mettre bottstrap en local et pas en CDN
 
 Création des COOKIES (Rgpd)
 
