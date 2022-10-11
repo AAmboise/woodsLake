@@ -43,9 +43,11 @@ $(document).ready(function(){
             error = true;
             message = "Veuillez remplir au moins un champs";
         }
-        if(telephone.length != 10 || isNaN(telephone)){ // phone a 10 chiffres et pas de lettres
-                error = true;
-                message = "Veuillez entrer un numéro de téléphone valide. Format accepté (0606060606 ou 06 06 06 06 06)";
+        if (telephone != ''){
+            if(telephone.length != 10 || isNaN(telephone)){ // phone a 10 chiffres et pas de lettres
+                    error = true;
+                    message = "Veuillez entrer un numéro de téléphone valide. Format accepté (0606060606 ou 06 06 06 06 06)";
+            }
         }
         if (password !== password2) { // password identique
             error = true;
