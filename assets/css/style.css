@@ -11,6 +11,10 @@ body {
   color: white;
 }
 
+.panel__card {
+  color: black;
+}
+
 @media (max-width: 576px) {
   .concert__card--text {
     font-size: 15px !important;
@@ -88,6 +92,14 @@ body {
 
 .groupe__card--portrait {
   min-height: 200px;
+}
+
+.panel__nav {
+  min-height: 75px;
+}
+
+.panel__card {
+  min-height: 600px;
 }
 
 * {
@@ -390,6 +402,30 @@ h3 {
   border-left: none;
   border-right: none;
   border-radius: 15%;
+}
+
+.panel__nav--concerts, .panel__nav--users, .panel__nav--photos, .panel__nav--extraits {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(1, 133, 194);
+}
+
+.panel__card--titre {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.panel__card--users td, .panel__card--concerts td, .panel__card--extraits td, .panel__card--galleries td, .panel__card--photos td {
+  text-align: center;
+  border-top: 3px solid rgb(0, 0, 0);
+}
+.panel__card--users td input, .panel__card--concerts td input, .panel__card--extraits td input, .panel__card--galleries td input, .panel__card--photos td input {
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

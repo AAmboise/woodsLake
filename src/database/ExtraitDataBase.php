@@ -22,8 +22,12 @@
           $sql= "SELECT * from `extrait`"; 
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
-            $req = $db->fetchALL();
-            return $req;
+            $req = $db->fetchALL(PDO::FETCH_OBJ);
+            $obj = [];
+            foreach ($req as $objReq){
+              $obj[] = new Extrait($objReq->ID, $objReq->titre, $objReq->URLFichier);
+            }
+            return $obj;
         }
         catch (PDOException $exception){
           $msgErreur = $exception->getMessage();

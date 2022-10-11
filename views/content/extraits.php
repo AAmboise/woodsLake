@@ -11,10 +11,9 @@ $classCard = '"extrait__card d-flex justify-content-between my-2 align-items-cen
 <?php
     $extraits = ExtraitDataBase::read();
     foreach ($extraits as $extrait){
-        // $extrait = new Extrait(null,$extrait['titre'],$extrait['URLFichier']);
         echo '<div class='.$classCard.'>
-            <div>Woods Lake : '.$extrait['titre'].'</div>
-            <audio controls src="../../upload/'.$extrait['URLFichier'].'"></audio>
+            <div>Woods Lake : '.$extrait->titre.'</div>
+            <audio controls src="../../upload/'.$extrait->fichier.'"></audio>
         </div>';
     }
 ?>

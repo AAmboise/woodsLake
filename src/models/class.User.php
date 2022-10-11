@@ -10,14 +10,14 @@
         public $password;
         public $isAdmin;
 
-        public function __construct($Id,$nom,$prenom,$email,$telephone,$Password,$IsAdmin=0){
-            $this->id = (int)$Id;
+        public function __construct($id,$nom,$prenom,$email,$telephone,$password,$isAdmin=0){
+            $this->id = (int)$id;
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->email = $email;
             $this->telephone = $telephone;
-            $this->password = $Password;
-            $this->isAdmin = (int)$IsAdmin;
+            $this->password = $password;
+            $this->isAdmin = (int)$isAdmin;
         }
 
         public function getId(): int{

@@ -2,18 +2,18 @@
 
     class Concert{
 
-        private int $id;
-        private string $date;
-        private string $lieu;
-        private string $heure;
-        private string $image;
+        public int $id;
+        public string $date;
+        public string $lieu;
+        public string $heure;
+        public string $image;
 
 
-        public function __construct($id=0, $date, $lieu, $heure, $image){
+        public function __construct($id, $date, $lieu, $heure, $image){
             $this->id = (int)$id;
             $this->date = $date;
-            $this->lieux = $lieu;
-            $this->lieux = $heure;
+            $this->lieu = $lieu;
+            $this->heure = $heure;
             $this->image = $image;
         }
 
@@ -49,10 +49,10 @@
             return $this;
         }
 
-        public function getimage(){
+        public function getImage(){
             return $this->image;
         }
-        public function setimage(string $image) {
+        public function setImage(string $image) {
             $this->image = $image;
             return $this;
         }

@@ -12,21 +12,20 @@ $classCard = '"concert__card d-flex justify-content-between mb-2 px-3 align-item
         <?php
             $concerts = ConcertDataBase::read();
             foreach ($concerts as $concert){
-                // $extrait = new Extrait(null,$extrait['titre'],$extrait['URLFichier']);
-                $date = date_create($concert['date']); // on formate la date en Français et dans le bon ordre
+                $date = date_create($concert->date); // on formate la date en Français et dans le bon ordre
                 echo '  <div>'.ConcertDataBase::moisFr(date_format($date, "d M Y")).'</div> 
                         <div class='.$classCard.'>
                             <div class="d-flex align-items-center">
                                 <div class="concert__img">
-                                    <img src="./upload/'.$concert['URLImage'].'" alt="">
+                                    <img src="./upload/'.$concert->image.'" alt="">
                                 </div>
 
                                 <div class="concert__card--text">
                                     <div>
-                                        <i class="fa fa-map"></i> Woods Lake à "'.$concert['lieu'].'"
+                                        <i class="fa fa-map"></i> Woods Lake à "'.$concert->lieu.'"
                                     </div>
                                     <div>
-                                        <i class="fa fa-clock"></i> '.$concert['heure'].'
+                                        <i class="fa fa-clock"></i> '.$concert->heure.'
                                     </div>
                                 </div>
                             </div>

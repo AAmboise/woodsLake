@@ -1,16 +1,16 @@
 <?php
-  class ConcertDataBase {
+  class PhotoDataBase {
 
-      public static function create ($concert){
+      public static function create ($photo){
         try{
-          $sql= "INSERT INTO `concert`(`date`, `URLImage`, lieu, heure) 
-            VALUES (:date, :URLImage, :lieu, :heure);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
+          $sql= "INSERT INTO `photo`(`titre`, `description`, `gallerie`, `URLFichier`,) 
+            VALUES (:titre,:description,:gallerie,:URLFichier);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
             $db=DataBase::getPDO()->prepare($sql);   // (cela protège de l'injection SQL)
             $db->execute([
-                'date'=>$concert->date,
-                'URLImage'=>$concert->image,
-                'lieu'=>$concert->lieu,
-                'heure'=>$concert->heure
+                'titre'=>$photo->titre,
+                'description'=>$photo->description,
+                'gallerie'=>$photo->gallerie,
+                'URLFichier'=>$photo->fichier
             ]);
         }
         catch (PDOException $exception){
@@ -21,13 +21,13 @@
 
       public static function read () {
         try {
-          $sql= "SELECT * from `concert`"; 
+          $sql= "SELECT * from `photo`"; 
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
             $req = $db->fetchALL(PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new Concert($objReq->ID, $objReq->date, $objReq->lieu, $objReq->heure, $objReq->URLImage);
+              $obj[] = new Photo($objReq->ID, $objReq->titre, $objReq->description, $objReq->gallerie, $objReq->URLFichier);
             }
             return $obj;
         }
@@ -37,11 +37,11 @@
         } 
       }
 
-      public static function update ($concertId, $colonne, $value){
+      public static function update ($photoId, $colonne, $value){
         try{
-          $sql= "UPDATE `concert`
+          $sql= "UPDATE `photo`
             SET $colonne = '$value' 
-            WHERE `id` = $concertId;";
+            WHERE `id` = $photoId;";
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
@@ -51,10 +51,10 @@
         } 
       }
 
-      public static function delete ($concertId){
+      public static function delete ($photoId){
         try{
-          $sql= "DELETE FROM `concert` 
-            WHERE `id` = $concertId;";
+          $sql= "DELETE FROM `photo` 
+            WHERE `id` = $photoId;";
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
@@ -63,12 +63,6 @@
             require_once './views/content/error.php';
         } 
       }
-
-      public static function moisFr($num){
-        $numero = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun' ,'Jul' ,'Aug' ,'Sep' ,'Oct' ,'Nov' ,'Dec');
-        $mois = array('Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre');
-        return str_replace($numero, $mois, $num);
-    }
 
   }
 ?>

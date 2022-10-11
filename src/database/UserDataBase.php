@@ -21,6 +21,24 @@ class UserDataBase {
         } 
       }
 
+      public static function read () {
+        try {
+          $sql= "SELECT * from `user`"; 
+            $db=DataBase::getPDO()->prepare($sql);
+            $db->execute();
+            $req = $db->fetchALL(PDO::FETCH_OBJ);
+            $obj = [];
+            foreach ($req as $objReq){
+              $obj[] = new User($objReq->ID, $objReq->nom, $objReq->prenom, $objReq->email, $objReq->telephone, $objReq->password, $objReq->isAdmin);
+            }
+            return $obj;
+        }
+        catch (PDOException $exception){
+          $msgErreur = $exception->getMessage();
+          require_once './views/content/error.php';
+        } 
+      }
+      
       public static function update ($userId, $colonne, $value){
         try{
           $sql= "UPDATE `user`

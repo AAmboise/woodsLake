@@ -28,9 +28,17 @@ CREATE TABLE `concert` ( -- CREATION DE LA TABLE
 
 CREATE TABLE `photo` ( -- CREATION DE LA TABLE PHOTO
     `ID` int(35) NOT NULL AUTO_INCREMENT,
-    `URLFichier` varchar(255) NOT NULL,
+    `titre` varchar(255) NOT NULL,
     `description` varchar(255) NOT NULL,
+    `gallerie` varchar(255) NOT NULL,
+    `URLFichier` varchar(255) NOT NULL,
     PRIMARY KEY(`ID`) 
+);
+
+CREATE TABLE `gallerie` ( -- CREATION DE LA TABLE Gallerie
+    `ID` int(35) NOT NULL AUTO_INCREMENT,
+    `nom` varchar(255) NOT NULL,
+    PRIMARY KEY(`id`) 
 );
 
 CREATE TABLE `reservation` ( -- CREATION DE LA TABLE RESERVATION

@@ -1,3 +1,10 @@
+/*********
+* OnLoad
+**********/
+
+$('.modifInfo').hide()
+$('.modifInfo__btn').hide()
+
 $(document).ready(function(){
 
 	/*********
@@ -5,11 +12,6 @@ $(document).ready(function(){
 	**********/
 
 
-	/*********
-	* OnLoad
-	**********/
-    $('.modifInfo').hide()
-    $('.modifInfo__btn').hide()
 
 
 	/*********

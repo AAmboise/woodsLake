@@ -1,20 +1,8 @@
-@import "./utilities/variables.scss";
-@import "./utilities/mixins.scss";
-@import "./utilities/placeholders.scss";
-
-@import "./vendors/bootstrap.scss";
-@import "./vendors/fontawesome.scss";
-
 @import "./base/fonts.scss";
 @import "./base/colors.scss";
 @import "./base/medias.scss";
 @import "./base/spacing.scss";
 @import "./base/reset.scss";
-
-@import "./composants/grid.scss";
-@import "./composants/buttons.scss";
-@import "./composants/forms.scss";
-
 
 @import "./layout/navbar.scss";
 @import "./layout/footer.scss";
@@ -29,6 +17,7 @@
 @import "./layout/groupe.scss";
 @import "./layout/gallerie.scss";
 @import "./layout/infoCompte.scss";
+@import "./layout/panelAdmin.scss";
 
 
 

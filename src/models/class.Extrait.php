@@ -22,7 +22,7 @@
         }
 
         public function getTitre(){
-            return $this->id;
+            return $this->titre;
         }
         public function setTitre(string $titre) {
             $this->titre = $titre;

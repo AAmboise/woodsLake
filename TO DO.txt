@@ -1,9 +1,13 @@
 
 Renommer les fichier photo et video avec https://www.php.net/base64_encode
 
+BUG :
+modification de compte : js verif de telephone meme si il n'y en a pas
 
 BONUS : 
 Création des COOKIES (Rgpd)
+
+installation de imagick
 
 NameSpace et USE dans les controllers
 
@@ -16,9 +20,9 @@ INSCRIPTION :
 Création de page :
 
 - Administration
-    - cud extrait audio (encodage base64)
-    - cud concerts (Formatage automatique de la photo "caré" + encodage base64)
-    - Cud photo (Formatage automatique de la photo + encodage base64)
+    - crud extrait audio (encodage base64)
+    - crud concerts (Formatage automatique de la photo "caré" + encodage base64) imagick
+    - Crud photo (Formatage automatique de la photo + encodage base64)
 
 - réservation de place
 
