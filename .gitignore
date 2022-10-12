@@ -1,4 +1,4 @@
 /node_module
-/.htaccess
-/.dev.ini
-src/ajax/listeEmail.json
+/upload
+.dev.ini
+/src/ajax/listeEmail.json

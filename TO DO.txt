@@ -2,7 +2,7 @@
 Renommer les fichier photo et video avec https://www.php.net/base64_encode
 
 BUG :
-
+revoir architecture général bootstrap (décallage des row) = probable col manquante
 
 BONUS : 
 - réservation de place
