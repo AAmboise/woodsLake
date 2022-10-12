@@ -19,7 +19,6 @@ INSCRIPTION :
 - crypter le mot de passe
 
 - Administration
-    - cud extrait audio (encodage base64)
     - cud concerts (Formatage automatique de la photo "caré" + encodage base64) imagick
     - Cud photo (Formatage automatique de la photo + encodage base64)
 

@@ -20,6 +20,11 @@
     // MODIFICATION USER
     // SUPPRESSION USER
 
+    // CRUD CONCERT
+    // CREATION CONCERT
+    // MODIFICATION CONCERT
+    // SUPPRESSION CONCERT
+
     // CRUD GALLERIES
     if(isset($_POST['addGallerie'])){ // CREATION GALLERIE
         if(!empty($_POST['gallerieTitre'])){
@@ -58,7 +63,7 @@
     // CRUD EXTRAIT
     if(isset($_POST['createExtrait'])){// CREATION EXTRAIT
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
-        $extensions = ['.MP3','.mp3','.WAV','.wav','.WMA','.wma', '.MIDI', 'midi'];
+        $extensions = ['.MP3','.mp3','.WAV','.wav','.WMA','.wma', '.MIDI', '.midi'];
         $destination = 'upload/';
         $nom_fichier = renomme_fichier($_FILES['extrait']['name']); // on renomme le fichier
         uploadFichier($_FILES['extrait'], $extensions, $destination, $nom_fichier);
@@ -84,11 +89,11 @@
                 return $destination.$nom_fichier;
             }
             else{
-                return false;
+                exit;
             }
         }
         else{
-            return false;
+            exit;
         }
     }
     function renomme_fichier($name){ // renome le fichiers 
