@@ -420,11 +420,11 @@ h3 {
   font-size: 35px;
 }
 
-.panel__card--users td, .panel__card--concerts td, .panel__card--extraits td, .panel__card--galleries td, .panel__card--photos td {
+.panel__card--users .barre, .panel__card--concerts .barre, .panel__card--extraits .barre, .panel__card--galleries .barre, .panel__card--photos .barre {
   text-align: center;
   border-top: 3px solid rgb(0, 0, 0);
 }
-.panel__card--users td input, .panel__card--concerts td input, .panel__card--extraits td input, .panel__card--galleries td input, .panel__card--photos td input {
+.panel__card--users .barre input, .panel__card--concerts .barre input, .panel__card--extraits .barre input, .panel__card--galleries .barre input, .panel__card--photos .barre input {
   border: none;
 }
 

@@ -19,33 +19,37 @@
                             $photos = PhotoDataBase::read();
                             foreach ($photos as $photo){
                                     $galleries = GallerieDataBase::read();
+                                    $selected = 'selected';
+                                    $notSelected = '';
                                     $gal = '';
                                     foreach ($galleries as $gallerie){
-                                                    if ($photo->gallerie == $gallerie->nom){
-                                                        $gal .= '<option selected="selected">'.$gallerie->nom.'</option>';
-                                                    }
-                                                    else {
-                                                        $gal .= '<option>'.$gallerie->nom.'</option>';
-                                                    }
-                                                }
-                            
+                                        if ($photo->gallerie == $gallerie->nom){
+                                            $selected = '';
+                                            $gal .= '<option selected="selected">'.$gallerie->nom.'</option>';
+                                        }
+                                        else {
+                                            $gal .= '<option>'.$gallerie->nom.'</option>';
+                                        }
+                                    }
                                 echo '
-                                <tr>
-                                    <form method="post" class="d-flex" id="admin__form--photo'.$photo->id.'">
-                                        <td><img src="./upload/'.$photo->image.'" style="height:50px;"></td>
-                                        <td><input type="text" name="titre" id="formulaire_titre" value="'.$photo->titre.'"></td>
-                                        <td><input type="text" name="description" id="formulaire_description" value="'.$photo->description.'"></td>
-                                        <td>
-                                            <select>
+                                    <tr>
+                                        <form method="post" class="d-flex" id="admin__form--photo'.$photo->id.'">
+                                            <td><img src="./upload/'.$photo->image.'" style="height:50px;"></td>
+                                            <td><input type="text" name="titre" id="formulaire_titre" value="'.$photo->titre.'"></td>
+                                            <td><input type="text" name="description" id="formulaire_description" value="'.$photo->description.'"></td>
+                                            <td>
+                                                <select>
                                                 '.$gal.'
-                                            </select>
-                                        </td>
-                                        <td> 
-                                            <button class="btn btn-warning">Modifier</button>
-                                            <button type="button" class="btn btn-danger supprCompte" data-bs-toggle="modal" data-bs-target="#adminphotosSuppr">Supprimer</button>
-                                        </td>
-                                    </form>
-                                </tr>';
+                                                <option '.$selected.'></option>
+                                                </select>
+                                            </td>
+                                            <td> 
+                                                <button class="btn btn-warning">Modifier</button>
+                                                <button type="button" class="btn btn-danger supprCompte" data-bs-toggle="modal" data-bs-target="#adminphotosSuppr">Supprimer</button>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                ';
                             }
                         ?>
                     </tbody>

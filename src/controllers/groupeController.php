@@ -9,5 +9,4 @@
         require_once './views/pages/groupe.php';
 
     
-
 ?>

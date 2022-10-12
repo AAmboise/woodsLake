@@ -7,7 +7,7 @@
             VALUES (:nom);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
             $db=DataBase::getPDO()->prepare($sql);   // (cela protège de l'injection SQL)
             $db->execute([
-                'titre'=>$gallerie->nom
+                'nom'=>$gallerie->nom
             ]);
         }
         catch (PDOException $exception){

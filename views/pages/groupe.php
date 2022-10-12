@@ -5,7 +5,9 @@ ob_start();
 
 <div class='container-fluid'>
     <?php
+
     require_once './views/content/groupe.php';
+    require_once './views/content/contact.php';
     ?>
 </div>
 
