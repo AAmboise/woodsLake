@@ -1,19 +1,15 @@
 
-Renommer les fichier photo et video avec https://www.php.net/base64_encode
-
 BUG :
 revoir architecture général bootstrap (décallage des row) = probable col manquante
 
 BONUS : 
 - réservation de place
 
-NameSpace et USE dans les controllers
-
 CONNEXION
-- Vérification ( correspondance email/password)
+- Vérification ( correspondance email/password) message JS a mettre
 
 INSCRIPTION : 
-- crypter le mot de passe
+- pb de vérif JS avec l'email si aucun compte n'existe
 
 - Administration
     - cud concerts (Formatage automatique de la photo "caré" + encodage base64) imagick
@@ -25,6 +21,7 @@ Design :
 
 Responsive :
 - contact
+- panel admin
 - tout checker
 
 

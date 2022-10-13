@@ -36,7 +36,8 @@
         }
         if (!empty($_POST['password']) && !empty($_POST['password2'])){
             if($_POST['password'] == $_POST['password2']){ // passwords identique
-                UserDataBase::update($_SESSION['id'],'password',$_POST['password']);
+                $passwordHash = hash("sha256", $_POST['password'], false);
+                UserDataBase::update($_SESSION['id'], 'password', $passwordHash);
             }
         }
         header('location: /compte');

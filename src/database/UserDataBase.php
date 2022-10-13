@@ -1,6 +1,7 @@
 <?php
 namespace Src\Database;
 use Src\Models\User;
+use PDO;
 
 class UserDataBase {
 
@@ -29,7 +30,7 @@ class UserDataBase {
           $sql= "SELECT * from `user`"; 
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
-            $req = $db->fetchALL(\PDO::FETCH_OBJ);
+            $req = $db->fetchALL(PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
               $obj[] = new User($objReq->ID, $objReq->nom, $objReq->prenom, $objReq->email, $objReq->telephone, $objReq->password, $objReq->isAdmin);
@@ -69,22 +70,21 @@ class UserDataBase {
         } 
       }
 
-      public static function checkLogin($email,$password) {
+      public static function checkLogin($email) {
         try {
-          $sql= "SELECT * from `user` 
-            where email like :email and password like :password;";
+          $sql= "SELECT * from `user`
+          WHERE email = :email";
             $db=DataBase::getPDO()->prepare($sql);
-            $db->execute([
-                'email'=>$email,
-                'password'=>$password
-            ]);
+            $db->bindValue(':email', $email, PDO::PARAM_STR);
+            $db->execute();
             $req = $db->fetch();
             if ($req) {
-                    $user = new User($req['ID'],$req['nom'],$req['prenom'],$req['email'],$req['telephone'],$req['password'],$req['isAdmin']);
-                    return $user;
-                }
-                else
-                return false;
+              $user = new User($req['ID'],$req['nom'],$req['prenom'],$req['email'],$req['telephone'],$req['password'],$req['isAdmin']);
+              return $user;
+            }
+            else{
+              return false;
+            }
         }
         catch (\PDOException $exception) {
             $msgErreur =$exception->getMessage();
