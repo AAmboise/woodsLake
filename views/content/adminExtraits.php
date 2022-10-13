@@ -1,4 +1,7 @@
-<div class="row panel__card--extraits panel__card--titre text-center">
+<?php
+    require_once __DIR__.'/../../vendor/autoload.php';
+?>
+        <div class="row panel__card--extraits panel__card--titre text-center">
                 <div class="col">Liste des Extraits</div>
         </div>
         <div class="row panel__card--extraits panel__card--extraits--titre justify-content-center align-item-center">
@@ -9,7 +12,7 @@
                     <div class="col-4">Action</div>
                 </div>
                         <?php
-                            $extraits = ExtraitDataBase::read();
+                            $extraits = Src\Database\ExtraitDataBase::read();
                             foreach ($extraits as $extrait){
                                 echo '
                                 <div class="row  barre d-flex my-1">

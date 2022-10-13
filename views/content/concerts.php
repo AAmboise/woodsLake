@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.'/../../vendor/autoload.php';
 $classCard = '"concert__card d-flex justify-content-between mb-2 px-3 align-items-center bg-dark bg-gradient" style="--bs-bg-opacity: .6;"';
 ?>
 
@@ -10,10 +11,10 @@ $classCard = '"concert__card d-flex justify-content-between mb-2 px-3 align-item
         </div>
   
         <?php
-            $concerts = ConcertDataBase::read();
+            $concerts = Src\Database\ConcertDataBase::read();
             foreach ($concerts as $concert){
                 $date = date_create($concert->date); // on formate la date en Français et dans le bon ordre
-                echo '  <div>'.ConcertDataBase::moisFr(date_format($date, "d M Y")).'</div> 
+                echo '  <div>'.Src\Database\ConcertDataBase::moisFr(date_format($date, "d M Y")).'</div> 
                         <div class='.$classCard.'>
                             <div class="d-flex align-items-center">
                                 <div class="concert__img">

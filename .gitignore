@@ -2,3 +2,5 @@
 /upload
 .dev.ini
 /src/ajax/listeEmail.json
+
+/vendor/

@@ -1,4 +1,7 @@
 <?php
+namespace Src\Database;
+use Src\Models\User;
+
 class UserDataBase {
 
       public static function create ($user){
@@ -15,7 +18,7 @@ class UserDataBase {
                 'isAdmin'=>0
             ]);
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -26,14 +29,14 @@ class UserDataBase {
           $sql= "SELECT * from `user`"; 
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
-            $req = $db->fetchALL(PDO::FETCH_OBJ);
+            $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
               $obj[] = new User($objReq->ID, $objReq->nom, $objReq->prenom, $objReq->email, $objReq->telephone, $objReq->password, $objReq->isAdmin);
             }
             return $obj;
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
           $msgErreur = $exception->getMessage();
           require_once './views/content/error.php';
         } 
@@ -47,7 +50,7 @@ class UserDataBase {
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -60,7 +63,7 @@ class UserDataBase {
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -83,7 +86,7 @@ class UserDataBase {
                 else
                 return false;
         }
-        catch (PDOException $exception) {
+        catch (\PDOException $exception) {
             $msgErreur =$exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -102,7 +105,7 @@ class UserDataBase {
             return false;
           }
         }
-        catch (PDOException $exception) {
+        catch (\PDOException $exception) {
           $msgErreur =$exception->getMessage();
           require_once './views/content/error.php';
         } 

@@ -1,3 +1,6 @@
+<?php
+    require_once __DIR__.'/../../vendor/autoload.php';
+?>
 <div class="row panel__card--galleries panel__card--titre text-center">
                 <div class="col">Liste des Galleries</div>
         </div>
@@ -8,7 +11,7 @@
                     <div class="col-6">Action</div>
                 </div> 
                 <?php
-                    $galleries = GallerieDataBase::read();
+                    $galleries = Src\Database\GallerieDataBase::read();
                     foreach ($galleries as $gallerie){
                         echo '
                             <div class="row  barre d-flex my-1">

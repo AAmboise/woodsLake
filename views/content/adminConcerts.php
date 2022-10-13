@@ -1,3 +1,6 @@
+<?php
+    require_once __DIR__.'/../../vendor/autoload.php';
+?>
         <div class="row panel__card--concerts panel__card--titre text-center">
             <div class="col">Liste des concerts</div>
         </div>
@@ -16,7 +19,7 @@
                     </thead>
                     <tbody>
                     <?php
-                        $concerts = ConcertDataBase::read();
+                        $concerts = Src\Database\ConcertDataBase::read();
                         foreach ($concerts as $concert){
                             echo '
                             <tr>

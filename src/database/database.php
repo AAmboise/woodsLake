@@ -1,7 +1,7 @@
 <?php
-require_once './src/models/models.php';
-require_once 'UserDataBase.php';
-require_once './src/configuration/configuration.php';
+
+namespace Src\Database;
+use Src\Configuration\configuration;
 
 class DataBase
 {
@@ -13,8 +13,8 @@ class DataBase
             $login = Configuration::get("user");
             $mdp = Configuration::get("password");
             // Création de la connexion
-            self::$pdo = new PDO($dsn, $login, $mdp, 
-                    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            self::$pdo = new \PDO($dsn, $login, $mdp, 
+                    array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION));
         }
         return self::$pdo;
     }

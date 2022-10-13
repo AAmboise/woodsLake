@@ -1,4 +1,5 @@
 <?php
+namespace Src\Models;
 
     class User{
 
@@ -32,7 +33,7 @@
         public function getNom(){
             return $this->nom;
         }
-        public function setNom(string $nom): string {
+        public function setNom(string $nom) {
             $this->nom = $nom;
      
             return $this;
@@ -41,7 +42,7 @@
         public function getPrenom(){
             return $this->prenom;
         }
-        public function setPrenom(string $prenom): string {
+        public function setPrenom(string $prenom) {
             $this->prenom = $prenom;
      
             return $this;
@@ -50,7 +51,7 @@
         public function getEmail(){
             return $this->email;
         }
-        public function setEmail(string $email): string {
+        public function setEmail(string $email) {
             $this->email = $email;
      
             return $this;
@@ -59,7 +60,7 @@
         public function getTelephone(){
             return $this->telephone;
         }
-        public function setTelephone(string $telephone): string {
+        public function setTelephone(string $telephone) {
             $this->telephone = $telephone;
      
             return $this;
@@ -68,7 +69,7 @@
         public function getPassword(){
             return $this->password;
         }
-        public function setPassword(string $password): string {
+        public function setPassword(string $password) {
             $this->password = $password;
      
             return $this;

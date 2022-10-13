@@ -1,3 +1,6 @@
+<?php
+    require_once __DIR__.'/../../vendor/autoload.php';
+?>
 <div class="row panel__card--users panel__card--titre text-center">
                 <div class="col">Liste des utilisateurs</div>
         </div>
@@ -12,7 +15,7 @@
                     <div class="col-2">Action</div>
                 </div>
                 <?php
-                    $users = UserDataBase::read();
+                    $users = Src\Database\UserDataBase::read();
                     foreach ($users as $user){
                         if($user->isAdmin){
                             $yes = ' selected';

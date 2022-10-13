@@ -1,8 +1,5 @@
 <?php
-        require_once './src/models/models.php';
-        require_once './src/database/database.php';
-        require_once './src/database/GallerieDataBase.php';
-        require_once './src/database/PhotoDataBase.php';
+        namespace Src\Controllers;
 
         session_start();
         $titre="La gallerie";

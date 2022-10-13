@@ -7,9 +7,6 @@ revoir architecture général bootstrap (décallage des row) = probable col manq
 BONUS : 
 - réservation de place
 
-
-installation de imagick
-
 NameSpace et USE dans les controllers
 
 CONNEXION

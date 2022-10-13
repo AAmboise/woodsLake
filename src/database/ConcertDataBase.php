@@ -1,4 +1,7 @@
 <?php
+namespace Src\Database;
+use Src\Models\Concert;
+
   class ConcertDataBase {
 
       public static function create ($concert){
@@ -13,7 +16,7 @@
                 'heure'=>$concert->heure
             ]);
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -24,14 +27,14 @@
           $sql= "SELECT * from `concert`"; 
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
-            $req = $db->fetchALL(PDO::FETCH_OBJ);
+            $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
               $obj[] = new Concert($objReq->ID, $objReq->date, $objReq->lieu, $objReq->heure, $objReq->URLImage);
             }
             return $obj;
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
           $msgErreur = $exception->getMessage();
           require_once './views/content/error.php';
         } 
@@ -45,7 +48,7 @@
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -58,7 +61,7 @@
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 

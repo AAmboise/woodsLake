@@ -1,5 +1,6 @@
 <?php
-
+    namespace Src\Controllers;
+    
     session_start();
     $titre="Nous contacter";
     $css = ' <link rel="stylesheet" href="./assets/css/style.css">';

@@ -1,4 +1,6 @@
-
+<?php
+    require_once __DIR__.'/../../vendor/autoload.php';
+?>
 <div class="row panel__card--photos panel__card--titre text-center">
                 <div class="col">Liste des Photos</div>
         </div>
@@ -16,9 +18,9 @@
                     </thead>
                     <tbody>
                         <?php
-                            $photos = PhotoDataBase::read();
+                            $photos = Src\Database\PhotoDataBase::read();
                             foreach ($photos as $photo){
-                                    $galleries = GallerieDataBase::read();
+                                    $galleries = Src\Database\GallerieDataBase::read();
                                     $selected = 'selected';
                                     $notSelected = '';
                                     $gal = '';

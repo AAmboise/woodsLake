@@ -1,11 +1,12 @@
 <?php
-    require_once './src/models/models.php';
-    require_once './src/database/database.php';
-    require_once './src/database/UserDataBase.php';
-    require_once './src/database/ExtraitDataBase.php';
-    require_once './src/database/ConcertDataBase.php';
-    require_once './src/database/GallerieDataBase.php';
-    require_once './src/database/PhotoDataBase.php';
+    namespace Src\Controllers;
+    use Src\Database\GallerieDatabase;
+    use Src\Database\UserDataBase;
+    use Src\Database\PhotoDataBase;
+    use Src\Database\ExtraitDataBase;
+    use Src\Database\ConcertDataBase;
+    use Src\Models\Extrait;
+    use Src\Models\Gallerie;
 
     session_start();
     $titre = "Administration";

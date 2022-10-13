@@ -1,4 +1,7 @@
 <?php
+namespace Src\Database;
+use Src\Models\Photo;
+
   class PhotoDataBase {
 
       public static function create ($photo){
@@ -13,7 +16,7 @@
                 'URLFichier'=>$photo->fichier
             ]);
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -24,14 +27,14 @@
           $sql= "SELECT * from `photo`"; 
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
-            $req = $db->fetchALL(PDO::FETCH_OBJ);
+            $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
               $obj[] = new Photo($objReq->ID, $objReq->titre, $objReq->description, $objReq->gallerie, $objReq->URLFichier);
             }
             return $obj;
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
           $msgErreur = $exception->getMessage();
           require_once './views/content/error.php';
         } 
@@ -45,7 +48,7 @@
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 
@@ -58,7 +61,7 @@
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
-        catch (PDOException $exception){
+        catch (\PDOException $exception){
             $msgErreur = $exception->getMessage();
             require_once './views/content/error.php';
         } 

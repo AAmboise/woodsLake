@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.'/../../vendor/autoload.php';
 $class = 'col-lg-3 col-sm-5 col-7 d-flex justify-content-center gallerie__card m-2'
 ?>
 
@@ -9,7 +10,7 @@ $class = 'col-lg-3 col-sm-5 col-7 d-flex justify-content-center gallerie__card m
 </div>
 
 <?php
-$galleries = GallerieDataBase::read();
+$galleries = Src\Database\GallerieDataBase::read();
   foreach ($galleries as $gallerie){
     echo '<div class="row text-center gallerie__titre align-items-center bg-light bg-gradient my-3">
             <div class="col-12">
@@ -17,7 +18,7 @@ $galleries = GallerieDataBase::read();
             </div>
           </div>';
     echo '<div class="row gallerie justify-content-evenly">';
-    $photos = PhotoDataBase::read();
+    $photos = Src\Database\PhotoDataBase::read();
     foreach ($photos as $photo){
       if ($photo->gallerie == $gallerie->nom){
         echo '<div class="'.$class.'">

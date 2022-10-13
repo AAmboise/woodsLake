@@ -1,11 +1,5 @@
 <?php
-namespace src\controllers;
-
-use src\models\User;
-require_once './src/models/models.php';
-require_once './src/database/ExtraitDataBase.php';
-require_once './src/database/ConcertDataBase.php';
-require_once './src/database/database.php';
+namespace Src\Controllers;
 
 session_start();
 $titre = "Accueil";
@@ -17,6 +11,4 @@ $script = '<script type="text/javascript" src="../assets/js/accueil.js"></script
 
 require_once './views/pages/accueil.php';
     
-
-
 ?>

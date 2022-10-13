@@ -1,6 +1,7 @@
 <?php
-    require_once './src/database/UserDataBase.php';
-    require_once './src/database/database.php';
+    namespace Src\Controllers;
+    use Src\Database\UserDataBase;
+
     session_start();
 
     UserDataBase::delete($_SESSION['id']); // on supprime le compte

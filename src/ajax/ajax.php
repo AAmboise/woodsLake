@@ -1,7 +1,7 @@
 <?php
-    require_once './src/models/models.php';
-    require_once './src/database/UserDataBase.php';
-    require_once './src/database/database.php';
+    namespace Src\Ajax;
+    use Src\Database\Database;
+
 
     // Requete SQL table user
 
