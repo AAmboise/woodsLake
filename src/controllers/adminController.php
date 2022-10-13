@@ -17,13 +17,28 @@
     require_once './views/pages/admin.php';
 
     // CRUD USERS
-    // MODIFICATION USER
-    // SUPPRESSION USER
+    if(isset($_POST['modifUser'])){ // MODIFICATION USER
+        UserDataBase::update($_POST['userId'],'nom',strtoupper($_POST['nom']));
+        UserDataBase::update($_POST['userId'],'prenom',ucwords($_POST['prenom']));
+        UserDataBase::update($_POST['userId'],'email',$_POST['email']);
+        UserDataBase::update($_POST['userId'],'telephone',$_POST['telephone']);
+        $resp = ['oui', 'non'];
+        $bool = [1,0];
+        $isAdmin = str_replace($resp, $bool,$_POST['isAdmin']);
+        UserDataBase::update($_POST['userId'],'isAdmin',$isAdmin);
+    }
+    if(isset($_POST['supprUser'])){ // SUPPRESSION USER
+        UserDataBase::delete($_POST['userId']);
+        header('location:/administration');
+    }
 
     // CRUD CONCERT
     // CREATION CONCERT
     // MODIFICATION CONCERT
-    // SUPPRESSION CONCERT
+    if(isset($_POST['supprConcert'])){ // SUPPRESSION CONCERT
+        ConcertDataBase::delete($_POST['concertId']);
+        header('location:/administration');
+    }
 
     // CRUD GALLERIES
     if(isset($_POST['addGallerie'])){ // CREATION GALLERIE
@@ -58,7 +73,11 @@
     // CRUD PHOTOS
     // CREATION PHOTO
     // MODIFICATION PHOTO
-    // SUPPRESSION PHOTO
+    if(isset($_POST['supprPhoto'])){ // SUPPRESSION PHOTO
+        unlink('./upload/'.$_POST['PhotoName']);
+        PhotoDataBase::delete($_POST['PhotoId']);
+        header('location:/administration');
+    }
 
     // CRUD EXTRAIT
     if(isset($_POST['createExtrait'])){// CREATION EXTRAIT

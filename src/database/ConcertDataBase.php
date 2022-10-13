@@ -65,9 +65,9 @@
       }
 
       public static function moisFr($num){
-        $numero = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun' ,'Jul' ,'Aug' ,'Sep' ,'Oct' ,'Nov' ,'Dec');
-        $mois = array('Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre');
-        return str_replace($numero, $mois, $num);
+        $anglais = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun' ,'Jul' ,'Aug' ,'Sep' ,'Oct' ,'Nov' ,'Dec');
+        $francais = array('Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre');
+        return str_replace($anglais, $francais, $num);
     }
 
   }
