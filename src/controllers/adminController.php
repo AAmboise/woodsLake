@@ -7,6 +7,7 @@
     use Src\Database\ConcertDataBase;
     use Src\Models\Extrait;
     use Src\Models\Gallerie;
+    use Src\Models\Concert;
 
     session_start();
     $titre = "Administration";
@@ -34,9 +35,20 @@
     }
 
     // CRUD CONCERT
-    // CREATION CONCERT
+    if(isset($_POST['createConcert'])){// CREATION CONCERT
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
+        $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
+        $destination = 'upload/';
+        $nom_fichier = renomme_fichier($_FILES['image']['name']); // on renomme le fichier
+        uploadFichier($_FILES['image'], $extensions, $destination, $nom_fichier);
+        $concert = new Concert(null, $_POST['date'], $_POST['lieu'], $_POST['heure'], $nom_fichier);
+        ConcertDataBase::create($concert);
+        header('location:/administration');
+        }
+    }
     // MODIFICATION CONCERT
     if(isset($_POST['supprConcert'])){ // SUPPRESSION CONCERT
+        unlink('./upload/'.$_POST['concertName']);
         ConcertDataBase::delete($_POST['concertId']);
         header('location:/administration');
     }
