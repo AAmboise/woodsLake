@@ -16,8 +16,7 @@
     $header = false;
     $script = '<script type="text/javascript" src="../assets/js/panel_admin.js"></script>';
     $alerte = '';
-    require_once './views/pages/admin.php';
-
+    
     // CRUD USERS
     if(isset($_POST['modifUser'])){ // MODIFICATION USER
         UserDataBase::update($_POST['userId'],'nom',strtoupper($_POST['nom']));
@@ -28,6 +27,7 @@
         $bool = [1,0];
         $isAdmin = str_replace($resp, $bool,$_POST['isAdmin']);
         UserDataBase::update($_POST['userId'],'isAdmin',$isAdmin);
+        header('location:/administration');
     }
     if(isset($_POST['supprUser'])){ // SUPPRESSION USER
         UserDataBase::delete($_POST['userId']);
@@ -113,6 +113,8 @@
         ExtraitDataBase::delete($_POST['extraitId']);
         header('location:/administration');
     }
+    
+    require_once './views/pages/admin.php';
 
     function uploadFichier($fichier,$extensions,$destination,$nom_fichier){ // upload du fichier
         $extension = strrchr($fichier['name'],'.'); // on recupere l'extension du fichier
@@ -128,6 +130,7 @@
             exit;
         }
     }
+
     function renomme_fichier($name){ // renome le fichiers 
         $extension = strrchr($name,'.'); // on recupere l'extension du fichier
         $nom = base64_encode($name); // On encode le nom du fichier

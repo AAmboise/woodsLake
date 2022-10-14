@@ -22,6 +22,10 @@ ini_set('display_errors',true);
 
     <!-- LIGHTBOX -->
     <link rel="stylesheet" type="text/css" href="../assets/css/lightbox.min.css"/>
+    
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 
 
