@@ -12,7 +12,7 @@ INSCRIPTION :
 - pb de vérif JS avec l'email si aucun compte n'existe
 
 - Administration
-    - cud concerts (Formatage automatique de la photo "caré" + encodage base64) imagick
+    Formatage image Concert imagick
     - Cud photo (Formatage automatique de la photo + encodage base64)
 
 

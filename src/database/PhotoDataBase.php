@@ -6,14 +6,14 @@ use Src\Models\Photo;
 
       public static function create ($photo){
         try{
-          $sql= "INSERT INTO `photo`(`titre`, `description`, `gallerie`, `URLFichier`,) 
-            VALUES (:titre,:description,:gallerie,:URLFichier);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
+          $sql= "INSERT INTO `photo`(`titre`, `description`, `gallerie`, `URLFichier`) 
+            VALUES (:titre, :description, :gallerie, :URLFichier);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
             $db=DataBase::getPDO()->prepare($sql);   // (cela protège de l'injection SQL)
             $db->execute([
                 'titre'=>$photo->titre,
                 'description'=>$photo->description,
                 'gallerie'=>$photo->gallerie,
-                'URLFichier'=>$photo->fichier
+                'URLFichier'=>$photo->image
             ]);
         }
         catch (\PDOException $exception){

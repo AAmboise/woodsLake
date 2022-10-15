@@ -19,7 +19,7 @@
                         foreach ($concerts as $concert){
                             echo '
                                 <div class="row  barre d-flex my-1">
-                                    <form method="post" class="d-flex align-items-center" id="admin__form--concert'.$concert->id.'">
+                                    <form method="post" class="d-flex align-items-center" enctype="multipart/form-data" id="admin__form--concert'.$concert->id.'">
                                     <input type="hidden" name="concertId" value="'.$concert->id.'">
                                     <input type="hidden" name="concertName" value="'.$concert->image.'">
                                         <div class="col-2">

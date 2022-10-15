@@ -23,7 +23,7 @@ $classCard = '"concert__card d-flex justify-content-between mb-2 px-3 align-item
 
                                 <div class="concert__card--text">
                                     <div>
-                                        <i class="fa fa-map"></i> Woods Lake à "'.$concert->lieu.'"
+                                        <i class="fa fa-map"></i> Woods Lake à '.$concert->lieu.'
                                     </div>
                                     <div>
                                         <i class="fa fa-clock"></i> '.$concert->heure.'
