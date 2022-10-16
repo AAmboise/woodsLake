@@ -6,11 +6,17 @@
         </div>
 
   <div class="slider slider-nav">
-    <div><img src="../../upload/img13.jpg" alt=""></div>
-    <div><img src="../../upload/img11.jpg" alt=""></div>
-    <div><img src="../../upload/img5.jpg" alt=""></div>
-    <div><img src="../../upload/img8.jpg" alt=""></div>
-    <div><img src="../../upload/img10.jpg" alt=""></div>
+  <?php
+      $photos = Src\Database\PhotoDataBase::read();
+      foreach ($photos as $photo){
+        if ($photo->gallerie == 'Slider'){
+          echo '
+          <div><img src="../../upload/'.$photo->image.'" alt="'.$photo->description.'"></div>
+          ';
+        }
+      }
+
+    ?>
   </div>
 
     </div>

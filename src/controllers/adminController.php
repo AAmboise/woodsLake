@@ -98,18 +98,19 @@
     }
 
     // CRUD PHOTOS
-    if(isset($_POST['createPhoto'])){// CREATION PHOTO
+    if(isset($_POST['createPhoto']) ){// CREATION PHOTO
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
         $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
         $destination = 'upload/';
         $nom_photo = renomme_fichier($_FILES['photo']['name']); // on renomme le fichier
         uploadFichier($_FILES['photo'], $extensions, $destination, $nom_photo);
         $photo = new Photo(null, $_POST['titre'], $_POST['description'], $_POST['gallerie'], $nom_photo);
+
         PhotoDataBase::create($photo);
         header('location:/administration');
         }
+        header('location:/administration');
     }
-    
     if(isset($_POST['modifPhoto'])){ // MODIFICATION PHOTO
         PhotoDataBase::update($_POST['photoId'],'titre',$_POST['titre']);
         PhotoDataBase::update($_POST['photoId'],'description',$_POST['description']);

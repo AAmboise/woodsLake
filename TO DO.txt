@@ -15,6 +15,9 @@ INSCRIPTION :
     Formatage image Concert imagick
     - Cud photo (Formatage automatique de la photo + encodage base64)
 
+Creer une gallerie non modifiable Header et Slick pour alimenter le header et le slider
+
+Vérif des erreur formulaire panel admin
 
 Design : 
 - ajout captcha contact form

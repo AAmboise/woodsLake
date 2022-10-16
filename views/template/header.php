@@ -9,15 +9,20 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../upload/img1.jpg" class="d-block w-100" alt="photo1" style=" height: 500px; object-fit: cover;">
-    </div>
-    <div class="carousel-item">
-      <img src="../../upload/img3.jpg" class="d-block w-100" alt="photo2" style=" height: 500px; object-fit: cover;">
-    </div>
-    <div class="carousel-item">
-      <img src="../../upload/img8.jpg" class="d-block w-100" alt="photo3" style=" height: 500px; object-fit: cover;">
-    </div>
+  <?php
+      $photos = Src\Database\PhotoDataBase::read();
+      foreach ($photos as $photo){
+        if ($photo->gallerie == 'Caroussel (3 max)'){
+          echo '
+          <div class="carousel-item">
+            <img src="../../upload/'.$photo->image.'" class="d-block w-100" alt="'.$photo->description.'" style=" height: 500px; object-fit: cover;">
+          </div>
+          ';
+        }
+      }
+
+    ?>
+
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

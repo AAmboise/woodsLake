@@ -100,7 +100,7 @@
                                     <option selected="selected"></option>
                                     <?=$addPhoto?>
                                 </select>
-                                <input type="file" name="photo" id="formulaire_photo">
+                                <input type="file" name="photo" id="formulaire_photo" required>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Annuler</button>

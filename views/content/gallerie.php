@@ -12,11 +12,13 @@ $class = 'col-lg-3 col-sm-5 col-7 d-flex justify-content-center gallerie__card m
 <?php
 $galleries = Src\Database\GallerieDataBase::read();
   foreach ($galleries as $gallerie){
-    echo '<div class="row text-center gallerie__titre align-items-center bg-light bg-gradient my-3">
-            <div class="col-12">
-              <div>'.$gallerie->nom.'</div>
-            </div>
-          </div>';
+    if ($gallerie->nom != 'Caroussel' && $gallerie->nom != 'Slider'){
+      echo '<div class="row text-center gallerie__titre align-items-center bg-light bg-gradient my-3">
+              <div class="col-12">
+                <div>'.$gallerie->nom.'</div>
+              </div>
+            </div>';  
+      }
     echo '<div class="row gallerie justify-content-evenly">';
     $photos = Src\Database\PhotoDataBase::read();
     foreach ($photos as $photo){

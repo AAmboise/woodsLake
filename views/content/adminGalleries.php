@@ -20,12 +20,15 @@
                                     <div class="col">
                                         <input type="text" name="gallerieNom" id="formulaire_titre" value="'.$gallerie->nom.'">
                                     </div>
-
-                                    <div class="col"> 
-                                        <button type="submit" name="modifGallerie" class="btn btn-warning">Modifier</button>
-                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#admingalleriesSuppr'.$gallerie->id.'">Supprimer</button>
-                                    </div>
-
+                                    ';
+                                    if ($gallerie->nom != 'Caroussel (3 max)' && $gallerie->nom != 'Slider'){
+                                        echo '
+                                        <div class="col"> 
+                                            <button type="submit" name="modifGallerie" class="btn btn-warning">Modifier</button>
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#admingalleriesSuppr'.$gallerie->id.'">Supprimer</button>
+                                        </div>';
+                                    }
+                                    echo '
                                     <!-- Modal suppr -->
                                     <div class="modal fade" id="admingalleriesSuppr'.$gallerie->id.'" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
