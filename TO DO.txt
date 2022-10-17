@@ -3,7 +3,6 @@ BUG :
 revoir architecture général bootstrap (décallage des row) = probable col manquante
 
 BONUS : 
-- réservation de place
 
 CONNEXION
 - Vérification ( correspondance email/password) message JS a mettre
@@ -13,9 +12,9 @@ INSCRIPTION :
 
 - Administration
     Formatage image Concert imagick
-    - Cud photo (Formatage automatique de la photo + encodage base64)
 
-Creer une gallerie non modifiable Header et Slick pour alimenter le header et le slider
+
+
 
 Vérif des erreur formulaire panel admin
 

@@ -67,6 +67,8 @@ ini_set('display_errors',true);
 <!-- Lightbox -->
 <script src="../assets/js/lightbox.js"></script>
 
+<script type="text/javascript" src="../assets/js/base.js"></script>
+
 <!-- SCRIPT SPECIFIQUE -->
 <?=$script?>
 
