@@ -2,6 +2,7 @@ RewriteEngine On
 
 # If the requested filename exists, simply serve it.
 # We only want to let Apache serve files and not directories.
+# Permet d'acceder au dossier "assets".
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
