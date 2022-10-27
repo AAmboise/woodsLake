@@ -73,7 +73,7 @@ $(document).ready(function(){
     **********/
      function verifEmail(email){  // return false si le mail existe déja et true si le mail n'existe pas
         $.ajax({
-            url : "./src/ajax/listeEmail.json",
+            url : "../src/ajax/listeEmail.json",
             method: "GET",
             dataType : "json",
             async : false, // necessaire pour faire sortir les infos de l'ajax

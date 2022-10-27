@@ -27,7 +27,7 @@ ini_set('display_errors',true);
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-
+    
 
     <title><?=$titre?></title>
     <?=$css?>
@@ -55,7 +55,7 @@ ini_set('display_errors',true);
     </div>
     
 <!-- BOOTSTRAP 5.2.2-->
-<script type="text/javascript" src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="../assets/js/bootstrap/bootstrap.min.js"></script>
 
 <!-- JQUERY 3.6.1 -->
 <script type="text/javascript" src="../assets/js/jquery-3.6.1.min.js"></script>

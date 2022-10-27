@@ -15,7 +15,7 @@
         if ($photo->gallerie == 'Caroussel (3 max)'){
           echo '
           <div class="carousel-item">
-            <img src="../../upload/'.$photo->image.'" class="d-block w-100" alt="'.$photo->description.'" style=" height: 500px; object-fit: cover;">
+            <img src="./upload/'.$photo->image.'" class="d-block w-100" alt="'.$photo->description.'" style=" height: 500px; object-fit: cover;">
           </div>
           ';
         }

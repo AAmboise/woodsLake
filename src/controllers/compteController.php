@@ -4,7 +4,7 @@
 
     session_start();
     $titre = "Mon compte";
-    $css = '<link rel="stylesheet" href="./assets/css/style.css">';
+    $css = '<link rel="stylesheet" href="../assets/css/style.css">';
     $menu = true;
     $header = false;
     $activeCompte = 'active';

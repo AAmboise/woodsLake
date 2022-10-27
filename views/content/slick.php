@@ -11,7 +11,7 @@
       foreach ($photos as $photo){
         if ($photo->gallerie == 'Slider'){
           echo '
-          <div><img src="../../upload/'.$photo->image.'" alt="'.$photo->description.'"></div>
+          <div><img src="../upload/'.$photo->image.'" alt="'.$photo->description.'"></div>
           ';
         }
       }

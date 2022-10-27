@@ -5,7 +5,7 @@
 
     session_start();
     $titre = "Connexion";
-    $css = '<link rel="stylesheet" href="./assets/css/style.css">';
+    $css = '<link rel="stylesheet" href="../assets/css/style.css">';
     $menu = true;
     $header = true;
     $script = '<script type="text/javascript" src="../assets/js/connexion.js"></script>';

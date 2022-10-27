@@ -3,7 +3,7 @@
 
         session_start();
         $titre="Le groupe";
-        $css= ' <link rel="stylesheet" href="./assets/css/style.css">';
+        $css= ' <link rel="stylesheet" href="../assets/css/style.css">';
         $menu= true;
         $header = true;
         $activeGroupe = 'active';

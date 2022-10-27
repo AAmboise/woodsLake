@@ -12,7 +12,7 @@
 
     session_start();
     $titre = "Administration";
-    $css = '<link rel="stylesheet" href="./assets/css/style.css">';
+    $css = '<link rel="stylesheet" href="../assets/css/style.css">';
     $menu = true;
     $header = false;
     $script = '<script type="text/javascript" src="../assets/js/panel_admin.js"></script>';

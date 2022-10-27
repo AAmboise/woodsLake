@@ -3,7 +3,7 @@
     
     session_start();
     $titre="Nous contacter";
-    $css = ' <link rel="stylesheet" href="./assets/css/style.css">';
+    $css = ' <link rel="stylesheet" href="../assets/css/style.css">';
     $menu = true;
     $header = true;
     $activeContact = 'active';
