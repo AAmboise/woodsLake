@@ -149,7 +149,7 @@
     function uploadFichier($fichier,$extensions,$destination,$nom_fichier){ // upload du fichier
         $extension = strrchr($fichier['name'],'.'); // on recupere l'extension du fichier
         if(in_array($extension,$extensions)){ // on verifie que l'extension est dans le tableau
-            if(move_uploaded_file($fichier['tmp_name'],$destination.$nom_fichier)){ // si on deplace bien le fichier dans le dossier upload, on retourne true
+            if(move_uploaded_file($fichier['tmp_name'],$destination.$nom_fichier)){ 
                 return $destination.$nom_fichier;
             }
             else{

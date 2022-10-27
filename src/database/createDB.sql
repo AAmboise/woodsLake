@@ -40,7 +40,7 @@ CREATE TABLE `gallerie` ( -- CREATION DE LA TABLE Gallerie
     `nom` varchar(255) NOT NULL,
     PRIMARY KEY(`id`) 
 );
-INSERT INTO `gallerie` (nom) VALUES ('Caroussel');
+INSERT INTO `gallerie` (nom) VALUES ('Caroussel (3 max)');
 INSERT INTO `gallerie` (nom) VALUES ('Slider');
 
 CREATE TABLE `reservation` ( -- CREATION DE LA TABLE RESERVATION

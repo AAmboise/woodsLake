@@ -3,8 +3,7 @@
 namespace Src\Database;
 use Src\Configuration\configuration;
 
-class DataBase
-{
+class DataBase {
     private static $pdo;
     public static function getPDO() {
         if (self::$pdo === null) {
