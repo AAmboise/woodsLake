@@ -38,8 +38,8 @@ ini_set('display_errors',true);
     <div class='container-fluid'>
 
             <?php 
-                $menu ? require_once './views/template/nav.php' : false;
-                $header ? require_once './views/template/header.php' : false;
+                $menu ? require_once '../views/template/nav.php' : false;
+                $header ? require_once '../views/template/header.php' : false;
             ?>
 
         <div class='row main'>
@@ -48,7 +48,7 @@ ini_set('display_errors',true);
 
         <div class="row">
             <?php
-            require_once './views/template/footer.php';
+            require_once '../views/template/footer.php';
             ?>
         </div>
         

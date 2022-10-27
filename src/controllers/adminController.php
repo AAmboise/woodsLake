@@ -144,7 +144,7 @@
         header('location:/administration');
     }
     
-    require_once './views/pages/admin.php';
+    require_once '../views/pages/admin.php';
 
     function uploadFichier($fichier,$extensions,$destination,$nom_fichier){ // upload du fichier
         $extension = strrchr($fichier['name'],'.'); // on recupere l'extension du fichier

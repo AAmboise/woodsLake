@@ -10,7 +10,7 @@
     $script ='';
     $alerte = '';
 
-    require_once './views/pages/contact.php';
+    require_once '../views/pages/contact.php';
     
     if (!empty($_POST["nom"]) && !empty($_POST["prenom"]) && !empty($_POST["telephone"]) && !empty($_POST["email"]) && !empty($_POST["message"])){
         newMessage();

@@ -8,7 +8,7 @@
         $header = true;
         $activeGroupe = 'active';
         $script ='';
-        require_once './views/pages/groupe.php';
+        require_once '../views/pages/groupe.php';
 
     
 ?>

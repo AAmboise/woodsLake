@@ -15,7 +15,7 @@
         array_push($json, $data['email']);
     }
     
-    file_put_contents("./src/Ajax/listeEmail.json", json_encode($json));
+    file_put_contents("../src/Ajax/listeEmail.json", json_encode($json));
 
 
 ?>

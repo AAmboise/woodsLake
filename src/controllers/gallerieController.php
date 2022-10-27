@@ -8,7 +8,7 @@
         $header = true;
         $activeGallerie = 'active';
         $script ='';
-        require_once './views/pages/gallerie.php';
+        require_once '../views/pages/gallerie.php';
 
     
 ?>

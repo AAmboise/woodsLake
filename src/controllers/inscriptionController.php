@@ -35,6 +35,6 @@
         
     }
 
-    require_once './views/pages/inscription.php';
+    require_once '../views/pages/inscription.php';
 ?>
 

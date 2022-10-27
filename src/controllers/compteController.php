@@ -53,5 +53,5 @@
 
 
     
-    require_once './views/pages/compte.php';
+    require_once '../views/pages/compte.php';
     ?>

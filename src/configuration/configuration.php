@@ -19,9 +19,9 @@ public static function get($nom, $valeurParDefaut = null) {
 // Renvoie le tableau des paramètres en le chargeant au besoin
 private static function getParametres() {
   if (self::$parametres == null) {
-    $cheminFichier = "./src/configuration/prod.ini";
+    $cheminFichier = "../src/configuration/prod.ini";
     if (!file_exists($cheminFichier)) {
-      $cheminFichier = "./src/configuration/dev.ini";
+      $cheminFichier = "../src/configuration/dev.ini";
     }
     if (!file_exists($cheminFichier)) {
       throw new \Exception("Aucun fichier de configuration trouvé");

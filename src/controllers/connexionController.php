@@ -1,7 +1,7 @@
 <?php
     namespace Src\Controllers;
     use Src\Database\UserDataBase;
-    require_once './src/Ajax/ajax.php';
+    require_once '../src/Ajax/ajax.php';
 
     session_start();
     $titre = "Connexion";
@@ -36,5 +36,5 @@
 
 
     
-    require_once './views/pages/connexion.php';
+    require_once '../views/pages/connexion.php';
     ?>
