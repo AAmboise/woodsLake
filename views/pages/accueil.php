@@ -7,7 +7,7 @@ ob_start();
     require_once '../views/content/nav2.php';
     require_once '../views/content/concerts.php';
     require_once '../views/content/extraits.php';
-    require_once '../views/content/slick.php';
+    $slick ? require_once '../views/content/slick.php' : false;
     require_once '../views/content/contact.php';
     ?>
 </div>

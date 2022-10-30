@@ -16,6 +16,17 @@ class Functions{
         return $header;
     }
 
+    public static function check_slick(){
+        $slick = false;
+        $photos = PhotoDataBase::read();
+        foreach ($photos as $photo){
+            if ($photo->gallerie == 'Slider'){
+                $slick = true;
+            }
+        }
+        return $slick;
+    }
+
 }
 
 
