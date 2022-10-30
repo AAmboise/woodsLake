@@ -1,6 +1,6 @@
 /node_module
 /upload
-.dev.ini
-/src/ajax/listeEmail.json
+/Src/Configuration/dev.ini
+/Src/Ajax/listeEmail.json
 
 /vendor/
