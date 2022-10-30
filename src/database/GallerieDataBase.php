@@ -7,8 +7,8 @@ use Src\Models\Gallerie;
       public static function create ($gallerie){
         try{
           $sql= "INSERT INTO `gallerie`(`nom`) 
-            VALUES (:nom);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
-            $db=DataBase::getPDO()->prepare($sql);   // (cela protège de l'injection SQL)
+            VALUES (:nom);"; // Sécurité contre les injections SQL
+            $db=DataBase::getPDO()->prepare($sql);  
             $db->execute([
                 'nom'=>$gallerie->nom
             ]);

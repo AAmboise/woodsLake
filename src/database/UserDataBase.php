@@ -8,8 +8,8 @@ class UserDataBase {
       public static function create ($user){
         try{
           $sql= "INSERT INTO `user`(`nom`, `prenom`,`email`, `telephone`,`password`,`isAdmin`) 
-            VALUES (:nom,:prenom,:email,:telephone,:password,:isAdmin);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
-            $db=DataBase::getPDO()->prepare($sql);   // (cela protège de l'injection SQL)
+            VALUES (:nom,:prenom,:email,:telephone,:password,:isAdmin);"; // Sécurité contre les injections SQL
+            $db=DataBase::getPDO()->prepare($sql);
             $db->execute([
                 'nom'=>$user->nom,
                 'prenom'=>$user->prenom,

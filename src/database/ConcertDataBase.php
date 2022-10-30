@@ -7,8 +7,8 @@ use Src\Models\Concert;
       public static function create ($concert){
         try{
           $sql= "INSERT INTO `concert`(`date`, `URLImage`, lieu, heure) 
-            VALUES (:date, :URLImage, :lieu, :heure);"; // les parties variables marquées par : sont remplacées grace a un tableau associatif!
-            $db=DataBase::getPDO()->prepare($sql);   // (cela protège de l'injection SQL)
+            VALUES (:date, :URLImage, :lieu, :heure);"; // Sécurité contre les injections SQL
+            $db=DataBase::getPDO()->prepare($sql);   
             $db->execute([
                 'date'=>$concert->date,
                 'URLImage'=>$concert->image,
