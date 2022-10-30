@@ -9,6 +9,7 @@
     use Src\Models\Gallerie;
     use Src\Models\Concert;
     use Src\Models\Photo;
+    use Src\Functions\Functions;
 
     session_start();
     $titre = "Administration";
@@ -39,9 +40,9 @@
     if(isset($_POST['createConcert'])){// CREATION CONCERT
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
         $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
-        $destination = 'upload/';
-        $nom_fichier = renomme_fichier($_FILES['image']['name']); // on renomme le fichier
-        uploadFichier($_FILES['image'], $extensions, $destination, $nom_fichier);
+        $destination = '../upload/';
+        $nom_fichier = Functions::renomme_fichier($_FILES['image']['name']); // on renomme le fichier
+        Functions::uploadFichier($_FILES['image'], $extensions, $destination, $nom_fichier);
         $concert = new Concert(null, $_POST['date'], $_POST['lieu'], $_POST['heure'], $nom_fichier);
         ConcertDataBase::create($concert);
         header('location:/administration');
@@ -54,9 +55,9 @@
         if(!empty($_FILES['image'])){
             unlink('./upload/'.$_POST['concertName']); // on supprime l'ancienne photo
             $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
-            $destination = 'upload/';
-            $url_image = renomme_fichier($_FILES['image']['name']); // on renomme le nouveau fichier
-            uploadFichier($_FILES['image'], $extensions, $destination, $url_image); // on upload la nouvelle iage
+            $destination = '../upload/';
+            $url_image = Functions::renomme_fichier($_FILES['image']['name']); // on renomme le nouveau fichier
+            Functions::uploadFichier($_FILES['image'], $extensions, $destination, $url_image); // on upload la nouvelle iage
             ConcertDataBase::update($_POST['concertId'],'URLImage',$url_image);
         }
         header('location:/administration');
@@ -101,9 +102,9 @@
     if(isset($_POST['createPhoto']) ){// CREATION PHOTO
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
         $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
-        $destination = 'upload/';
-        $nom_photo = renomme_fichier($_FILES['photo']['name']); // on renomme le fichier
-        uploadFichier($_FILES['photo'], $extensions, $destination, $nom_photo);
+        $destination = '../upload/';
+        $nom_photo = Functions::renomme_fichier($_FILES['photo']['name']); // on renomme le fichier
+        Functions::uploadFichier($_FILES['photo'], $extensions, $destination, $nom_photo);
         $photo = new Photo(null, $_POST['titre'], $_POST['description'], $_POST['gallerie'], $nom_photo);
 
         PhotoDataBase::create($photo);
@@ -126,9 +127,9 @@
     if(isset($_POST['createExtrait'])){// CREATION EXTRAIT
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
         $extensions = ['.MP3','.mp3','.WAV','.wav','.WMA','.wma', '.MIDI', '.midi'];
-        $destination = 'upload/';
-        $nom_fichier = renomme_fichier($_FILES['extrait']['name']); // on renomme le fichier
-        uploadFichier($_FILES['extrait'], $extensions, $destination, $nom_fichier);
+        $destination = '../upload/';
+        $nom_fichier = Functions::renomme_fichier($_FILES['extrait']['name']); // on renomme le fichier
+        Functions::uploadFichier($_FILES['extrait'], $extensions, $destination, $nom_fichier);
         $extrait = new Extrait(null, $_POST['titre'], $nom_fichier);
         ExtraitDataBase::create($extrait);
         header('location:/administration');
@@ -146,26 +147,6 @@
     
     require_once '../views/pages/admin.php';
 
-    function uploadFichier($fichier,$extensions,$destination,$nom_fichier){ // upload du fichier
-        $extension = strrchr($fichier['name'],'.'); // on recupere l'extension du fichier
-        if(in_array($extension,$extensions)){ // on verifie que l'extension est dans le tableau
-            if(move_uploaded_file($fichier['tmp_name'],$destination.$nom_fichier)){ 
-                return $destination.$nom_fichier;
-            }
-            else{
-                exit;
-            }
-        }
-        else{
-            exit;
-        }
-    }
 
-    function renomme_fichier($name){ // renome le fichiers 
-        $extension = strrchr($name,'.'); // on recupere l'extension du fichier
-        $nom = base64_encode($name); // On encode le nom du fichier
-        $date = date('Y-m-d-h-i-s'); // ajoute la date au nom de l'image
-        return $date.$nom.$extension; // retourne le nom de l'image
-    }
     
     ?>

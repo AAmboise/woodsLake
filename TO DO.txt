@@ -27,3 +27,7 @@ Responsive :
 - tout checker
 
 
+FEATURE a ajouter 
+- Pouvoir choisir l'ordre des contenu (drag)
+- Pouvoir réserver une salle de Concert
+- pouvoir modifier plusieur choses en meme temps dans le panel admin
