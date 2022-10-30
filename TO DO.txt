@@ -1,33 +1,15 @@
 
-BUG :
-revoir architecture général bootstrap (décallage des row) = probable col manquante
-
-BONUS : 
-
-CONNEXION
-- Vérification ( correspondance email/password) message JS a mettre
-
-INSCRIPTION : 
+BUGS
 - pb de vérif JS avec l'email si aucun compte n'existe
+- Vérification ( correspondance email/password) message JS a mettre
+- revoir architecture général bootstrap (décallage des row) = probable col manquante
 
-- Administration
-    Formatage image Concert imagick
-
-
-
-
-Vérif des erreur formulaire panel admin
-
-Design : 
-- ajout captcha contact form
-
-Responsive :
-- contact
-- panel admin
-- tout checker
-
-
-FEATURE a ajouter 
+A FAIRE 
 - Pouvoir choisir l'ordre des contenu (drag)
 - Pouvoir réserver une salle de Concert
 - pouvoir modifier plusieur choses en meme temps dans le panel admin
+- Formatage  dynamique image Concert imagick
+- Vérif des erreur formulaire panel admin
+- ajout captcha contact form.
+- responsive panel admin
+- responsive contact
