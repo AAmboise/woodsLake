@@ -13,20 +13,30 @@
     $alerte = '';
 
 
-    if( !empty($_POST['nom']) && 
-    !empty($_POST['prenom']) && 
-        !empty($_POST['email']) && 
+
+
+    if( !empty($_POST['nom'])       && 
+        !empty($_POST['prenom'])    && 
+        !empty($_POST['email'])     && 
         !empty($_POST['telephone']) && 
-        !empty($_POST['password']) && 
+        !empty($_POST['password'])  && 
         !empty($_POST['password2'])
         ){ // tous les champs sont remplis
+            
+            // Sécurité contre les attaques XSS
+            $nom = htmlspecialchars($_POST['nom']);
+            $prenom = htmlspecialchars($_POST['prenom']);
+            $email = htmlspecialchars($_POST['email']);
+            $telephone = htmlspecialchars($_POST['telephone']);
+            $password = htmlspecialchars($_POST['password']);
+            $password2 = htmlspecialchars($_POST['password2']);
 
-        if($_POST['password'] == $_POST['password2']){ // passwords identique
-            if(preg_match('`[0-9]{10}`',str_replace(' ','',$_POST['telephone']))){ // verifie le format telephonne
-                $unique = UserDataBase::checkemail($_POST['email']);
+        if($password == $password2){ // passwords identique
+            if(preg_match('`[0-9]{10}`',str_replace(' ','',$telephone))){ // verifie le format telephonne
+                $unique = UserDataBase::checkemail($email);
                 if($unique){ // on vérifie que l'email n'existe pas
-                    $passwordHash = hash("sha256", $_POST['password'], false);
-                    $user = new User(null, strtoupper($_POST['nom']),ucwords($_POST['prenom']),$_POST['email'],str_replace(' ','',$_POST['telephone']),$passwordHash,0);
+                    $passwordHash = hash("sha256", $password, false);
+                    $user = new User(null, strtoupper($nom),ucwords($prenom),$email,str_replace(' ','',$telephone),$passwordHash,0);
                     UserDataBase::create($user);
                     header('location: /connexion');
                 }

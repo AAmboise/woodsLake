@@ -5,7 +5,7 @@ use Src\Database\PhotoDataBase;
 class Functions{
 
 
-    public static function check_carousel(){
+    public static function check_carousel(){ // On vérifie qu'il y a au moins 1 image dans la galerie Carousel
         $header = false;
         $photos = PhotoDataBase::read();
         foreach ($photos as $photo){
@@ -16,7 +16,7 @@ class Functions{
         return $header;
     }
 
-    public static function check_slick(){
+    public static function check_slick(){ // on vérifie qu'il y a au moins 1 image dans la galerie Slider
         $slick = false;
         $photos = PhotoDataBase::read();
         foreach ($photos as $photo){
@@ -47,6 +47,13 @@ class Functions{
         $nom = base64_encode($name); // On encode le nom du fichier
         $date = date('Y-m-d-h-i-s'); // ajoute la date au nom de l'image
         return $date.$nom.$extension; // retourne le nom de l'image
+    }
+
+    public static function newMessage($nom, $prenom, $email, $telephone, $message){
+        $to = 'adrien.amboise@gmail.com';
+        $sujet = 'WOODS LAKE : message de '. $nom. ' ' . $prenom;
+        $msg = ' E-mail :'.$email. ' -------- Telephone : '.$telephone. ' -------- Message : '.$message;
+        mail($to, $sujet , $msg);
     }
 
 }
