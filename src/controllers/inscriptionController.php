@@ -2,12 +2,13 @@
     namespace Src\Controllers;
     use Src\Database\UserDataBase;
     use Src\Models\User;
+    use Src\Functions\Functions;
 
     session_start();
     $titre = "Connexion";
     $css = '<link rel="stylesheet" href="../assets/css/style.css">';
     $menu = true;
-    $header = true;
+    $header = Functions::check_carousel();
     $script = '<script type="text/javascript" src="../assets/js/inscription.js"></script>';
     $alerte = '';
 

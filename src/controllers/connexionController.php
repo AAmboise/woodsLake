@@ -1,13 +1,14 @@
 <?php
     namespace Src\Controllers;
     use Src\Database\UserDataBase;
+    use Src\Functions\Functions;
     require_once '../src/Ajax/ajax.php';
 
     session_start();
     $titre = "Connexion";
     $css = '<link rel="stylesheet" href="../assets/css/style.css">';
     $menu = true;
-    $header = true;
+    $header = Functions::check_carousel();
     $script = '<script type="text/javascript" src="../assets/js/connexion.js"></script>';
     $alerte = '';
     

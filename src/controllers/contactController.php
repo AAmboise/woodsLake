@@ -1,11 +1,12 @@
 <?php
     namespace Src\Controllers;
+    use Src\Functions\Functions;
     
     session_start();
     $titre="Nous contacter";
     $css = ' <link rel="stylesheet" href="../assets/css/style.css">';
     $menu = true;
-    $header = true;
+    $header = Functions::check_carousel();
     $activeContact = 'active';
     $script ='';
     $alerte = '';
