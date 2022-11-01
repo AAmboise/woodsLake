@@ -7,13 +7,7 @@
     UserDataBase::delete($_SESSION['id']); // on supprime le compte
 
     // on deconnecte le compte
-    unset( $_SESSION['isConnected']);
-    unset( $_SESSION['id']);
-    unset( $_SESSION['isAdmin']);
-    unset( $_SESSION['prenom']);
-    unset( $_SESSION['nom']);
-    unset( $_SESSION['email']);
-    unset( $_SESSION['telephone']);
+    session_destroy();
 
     header('location: /accueil'); // on redirige vers la page d'accueil
 
