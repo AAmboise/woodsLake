@@ -38,7 +38,7 @@ $(document).ready(function(){
 
         //vérifications 
 
-        if(nom == '' && prenom == '' && email == '' && telephone == '' && password == '' && password2 != '' )
+        if(nom == '' && prenom == '' && email == '' && telephone == '' && password == '' && password2 == '' )
         {
             error = true;
             message = "Veuillez remplir au moins un champs";
