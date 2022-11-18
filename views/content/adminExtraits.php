@@ -23,7 +23,7 @@
                                                 <input type="text" name="extraitTitre" id="formulaire_titre" value="'.$extrait->titre.'">
                                             </div>
                                             <div class="col">
-                                                <audio controls src="../../upload/'.$extrait->fichier.'"></audio>
+                                                <audio controls src="/upload/'.$extrait->fichier.'"></audio>
                                             </div>
                                             <div class="col"> 
                                                 <button type="submit" name="modifExtrait" class="btn btn-warning">Modifier</button>

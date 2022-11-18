@@ -32,7 +32,7 @@
                                             <input type="text" name="heure" id="formulaire_heure" value="'.$concert->heure.'">
                                         </div>
                                         <div class="col-1">
-                                            <img src="../upload/'.$concert->image.'" style="height:50px;">
+                                            <img src="/upload/'.$concert->image.'" style="height:50px;">
                                         </div>
                                         <div class="col-3">
                                             <input type="file" name="image" id="formulaire_image">

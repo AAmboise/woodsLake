@@ -18,7 +18,7 @@ $classCard = '"concert__card d-flex justify-content-between mb-2 px-3 align-item
                         <div class='.$classCard.'>
                             <div class="d-flex align-items-center">
                                 <div class="concert__img">
-                                    <img src="../upload/'.$concert->image.'" alt="">
+                                    <img src="/upload/'.$concert->image.'" alt="">
                                 </div>
 
                                 <div class="concert__card--text">

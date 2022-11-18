@@ -36,7 +36,7 @@
                                         <input type="hidden" name="photoId" value="'.$photo->id.'">
                                         <input type="hidden" name="photoName" value="'.$photo->image.'">
                                         <div class="col-2">
-                                            <img src="../upload/'.$photo->image.'" style="height:50px;">
+                                            <img src="/upload/'.$photo->image.'" style="height:50px;">
                                         </div>
                                         <div class="col-2">
                                             <input type="text" name="titre" id="formulaire_titre" value="'.$photo->titre.'">

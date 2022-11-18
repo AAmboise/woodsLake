@@ -1,6 +1,6 @@
 <div class="row nav1 d-flex justify-content-between bg-dark bg-gradient" style="--bs-bg-opacity: .9;">
   <div class="col-1">
-    <a href="/accueil"><img src="../../assets/imgs/banniereWoodsLake2.png" alt=""></a>
+    <a href="/accueil"><img src="/assets/imgs/banniereWoodsLake2.png" alt=""></a>
   </div>
   <div class=" col-sm-10 col-md-9">
     <nav class="navbar navbar-expand-lg">

@@ -14,7 +14,7 @@ $classCard = '"extrait__card d-flex justify-content-between my-2 align-items-cen
     foreach ($extraits as $extrait){
         echo '<div class='.$classCard.'>
             <div>Woods Lake : '.$extrait->titre.'</div>
-            <audio controls src="../../upload/'.$extrait->fichier.'"></audio>
+            <audio controls src="/upload/'.$extrait->fichier.'"></audio>
         </div>';
     }
 ?>
