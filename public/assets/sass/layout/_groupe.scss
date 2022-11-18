@@ -1,0 +1,32 @@
+.groupe__titre{
+
+    font-size: 40px;
+    font-weight: bold;
+}
+.groupe__card{
+    .groupe__card--titre{
+        font-size: 25px;
+        font-weight: bold;
+        .bande{
+            color: white;
+            border: 1px solid white;
+            background-color: white;
+        }
+    }
+}
+.groupe__card--portrait{ 
+    img{
+        width: 250px;
+        border: 1px solid white;
+        border-radius: 50%;
+    }  
+} 
+.groupe__card--text{
+    font-style: italic;
+}
+.right{
+    margin-left: 100px;
+} 
+.left{
+    margin-left: -100px;
+}          

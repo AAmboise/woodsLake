@@ -25,8 +25,8 @@ $galleries = Src\Database\GallerieDataBase::read();
       if ($photo->gallerie != 'Caroussel (3 max)' && $photo->gallerie != 'Slider'){
         if ($photo->gallerie == $gallerie->nom){
           echo '<div class="'.$class.'">
-          <a href="../../upload/'.$photo->image.'" data-lightbox="image-1">
-          <img src="../../upload/'.$photo->image.'" alt="'.$photo->description.'" title="'.$photo->titre.'"></a>
+          <a href="/upload/'.$photo->image.'" data-lightbox="image-1">
+          <img src="/upload/'.$photo->image.'" alt="'.$photo->description.'" title="'.$photo->titre.'"></a>
           </div>';
         }
       }

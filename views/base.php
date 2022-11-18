@@ -10,18 +10,18 @@ ini_set('display_errors',true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- BOOTSTRAP 5.2.2-->
-    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/ac64632661.js" crossorigin="anonymous"></script>
 
     <!-- SLICK -->
-    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/js/slick/slick.css"/>
     <!-- Add the new slick-theme.css if you want the default styling -->
-    <link rel="stylesheet" type="text/css" href="../assets/js/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/js/slick/slick-theme.css"/>
 
     <!-- LIGHTBOX -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/lightbox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/lightbox.min.css"/>
     
     <!-- FAVICON -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">

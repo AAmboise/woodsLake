@@ -1,0 +1,431 @@
+@font-face {
+  font-family: "Copperplate";
+  src: url("./fonts/OPTICopperplate") format("otf"), url("./fonts/OPTICopperplate-Light") format("otf"), url("./fonts/OPTICopperplate-Heavy") format("otf");
+}
+body {
+  font-family: "Copperplate";
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.panel__card {
+  color: black;
+}
+
+@media (max-width: 576px) {
+  .concert__card--text {
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  .concert__img img {
+    display: none;
+  }
+  .concert__card {
+    height: 100px;
+  }
+  .d-none {
+    display: block !important;
+  }
+  .displayRight {
+    display: none;
+  }
+  .contactForm__card2 {
+    padding: 0rem 1rem 0rem 1rem !important;
+  }
+  .contactForm__card2 input {
+    width: 100% !important;
+  }
+  .connexionForm__card2 {
+    padding: 0rem 1rem 0rem 1rem !important;
+  }
+  .connexionForm__card2 input {
+    width: 100% !important;
+  }
+}
+@media (max-width: 992px) {
+  .concert__card--text {
+    font-size: 20px !important;
+    margin-left: 30px !important;
+  }
+  .concert__card--text i {
+    display: none;
+  }
+  .extrait__card {
+    flex-direction: column;
+  }
+  .extrait__card audio {
+    margin-bottom: 10px;
+  }
+  .gallerie__card img {
+    padding: 10px;
+  }
+  .contactForm__card1 {
+    display: none;
+  }
+  .connexionForm__card1 {
+    display: none;
+  }
+}
+.main {
+  min-height: 600px;
+}
+
+.extraits {
+  min-height: 400px;
+}
+
+.concerts {
+  min-height: 400px;
+}
+
+.contact {
+  min-height: 200px;
+}
+
+.contactForm {
+  min-height: 400px;
+}
+
+.groupe__card--portrait {
+  min-height: 200px;
+}
+
+.panel__nav {
+  min-height: 75px;
+}
+
+.panel__card {
+  min-height: 600px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.container-fluid {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+li {
+  margin: auto 15px auto 15px;
+}
+li a {
+  color: white !important;
+  font-size: 20px !important;
+}
+li a.active {
+  text-decoration: underline;
+}
+li a:hover {
+  font-style: italic;
+}
+
+.nav1 a img {
+  height: 50px;
+}
+
+footer {
+  height: 12vh;
+  width: 100vw;
+  background-color: #607585;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+header img {
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+
+.extrait .extrait__card {
+  min-height: 100px;
+  font-size: 20px;
+  padding: 0 100px 0 100px !important;
+}
+.extrait .extrait__titre {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.extrait .extrait__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.concerts img {
+  height: 100px;
+  margin-left: 20px;
+  padding: 5px 0px 5px 0px;
+}
+.concerts .concert__card--text {
+  font-size: 25px;
+  margin-left: 100px;
+}
+.concerts .concert__card--btn {
+  margin-right: 50px;
+}
+.concerts .concert__titre {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.concerts .concert__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.slick .slick__titre {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.slick .slick__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+.slick .slick-dots li button:before {
+  color: white !important;
+}
+.slick img {
+  width: 300px;
+}
+
+h3 {
+  background: #fff;
+  color: #3498db;
+  font-size: 36px;
+  line-height: 100px;
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slide {
+  margin: 5px;
+}
+
+.contact .col-8 {
+  overflow: hidden;
+  position: relative;
+}
+.contact .col-8 .contact__titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+.contact .col-8 .bgImg {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: 100%;
+}
+
+.wrap {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(../imgs/banniereContact.png);
+  background-size: cover;
+}
+.wrap::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wrap button {
+  position: relative;
+}
+
+.contactForm .contactForm__card1 {
+  height: 600px;
+  background-image: url(../imgs/banniereContactFull.jpg);
+  background-size: cover;
+  opacity: 0.9;
+}
+.contactForm .contactForm__card2--titre {
+  margin: 40px 0 20px 0;
+  font-size: 35px !important;
+  font-weight: bold !important;
+}
+.contactForm .contactForm__card2 {
+  background-color: white;
+  color: black;
+  padding: 0 4rem 0 4rem;
+}
+.contactForm .contactForm__card2 input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.contactForm .contactForm__card2 label {
+  font-size: 13px;
+  font-weight: bold;
+}
+.contactForm .contactForm__card2 textarea {
+  width: 100%;
+  resize: none;
+}
+
+.connexionForm .connexionForm__card1 {
+  height: 600px;
+  background-image: url(../imgs/banniereContactFull.jpg);
+  background-size: cover;
+  opacity: 0.9;
+}
+.connexionForm .connexionForm__card2--titre {
+  margin: 40px 0 20px 0;
+  font-size: 35px !important;
+  font-weight: bold !important;
+}
+.connexionForm .connexionForm__card2 {
+  background-color: white;
+  color: black;
+  padding: 0 4rem 0 4rem !important;
+}
+.connexionForm .connexionForm__card2 input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.connexionForm .connexionForm__card2 label {
+  font-size: 13px;
+  font-weight: bold;
+}
+.connexionForm .connexionForm__card2 textarea {
+  width: 100%;
+  resize: none;
+}
+
+.groupe__titre {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.groupe__card .groupe__card--titre {
+  font-size: 25px;
+  font-weight: bold;
+}
+.groupe__card .groupe__card--titre .bande {
+  color: white;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.groupe__card--portrait img {
+  width: 250px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.groupe__card--text {
+  font-style: italic;
+}
+
+.right {
+  margin-left: 100px;
+}
+
+.left {
+  margin-left: -100px;
+}
+
+.gallerie__mainTitre {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.gallerie__card img {
+  height: 200px;
+}
+
+.gallerie__titre {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  height: 100px;
+}
+
+.infoCompteForm .infoCompteForm__card1 {
+  height: 600px;
+  background-image: url(../imgs/banniereContactFull.jpg);
+  background-size: cover;
+  opacity: 0.9;
+}
+.infoCompteForm .infoCompteForm__card2--titre {
+  margin: 40px 0 20px 0;
+  font-size: 35px !important;
+  font-weight: bold !important;
+}
+.infoCompteForm .infoCompteForm__card2 {
+  background-color: white;
+  color: black;
+  padding: 0 4rem 0 4rem !important;
+}
+.infoCompteForm .infoCompteForm__card2 input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 15%;
+}
+
+.panel__nav--concerts, .panel__nav--users, .panel__nav--photos, .panel__nav--extraits {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(1, 133, 194);
+}
+
+.panel__card--titre {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.panel__card--users .barre, .panel__card--concerts .barre, .panel__card--extraits .barre, .panel__card--galleries .barre, .panel__card--photos .barre {
+  text-align: center;
+  border-top: 3px solid rgb(0, 0, 0);
+}
+.panel__card--users .barre input, .panel__card--concerts .barre input, .panel__card--extraits .barre input, .panel__card--galleries .barre input, .panel__card--photos .barre input {
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */
