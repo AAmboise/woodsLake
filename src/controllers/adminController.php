@@ -1,12 +1,12 @@
 <?php
     namespace Src\Controllers;
-    use Src\Database\GallerieDatabase;
+    use Src\Database\GalerieDatabase;
     use Src\Database\UserDataBase;
     use Src\Database\PhotoDataBase;
     use Src\Database\ExtraitDataBase;
     use Src\Database\ConcertDataBase;
     use Src\Models\Extrait;
-    use Src\Models\Gallerie;
+    use Src\Models\Galerie;
     use Src\Models\Concert;
     use Src\Models\Photo;
     use Src\Functions\Functions;
@@ -68,33 +68,33 @@
         header('location:/administration');
     }
 
-    // CRUD GALLERIES
-    if(isset($_POST['addGallerie'])){ // CREATION GALLERIE
-        if(!empty($_POST['gallerieTitre'])){
-            $gallerie = new Gallerie(null,$_POST['gallerieTitre']);
-            $newGallerie = GallerieDataBase::create($gallerie);
+    // CRUD GALERIES
+    if(isset($_POST['addGalerie'])){ // CREATION GALERIE
+        if(!empty($_POST['galerieTitre'])){
+            $galerie = new Galerie(null,$_POST['galerieTitre']);
+            $newGalerie = GalerieDataBase::create($galerie);
             header('location:/administration');
         }
     }
-    if(isset($_POST['modifGallerie'])){ // MODIFICATION GALLERIE
-        $galleries = GallerieDataBase::read();
-        foreach ($galleries as $gallerie){
-            $galleriename ='';
-            if ($gallerie->id == $_POST['gallerieId']){
-                $gallerieName = $gallerie->nom;
+    if(isset($_POST['modifGalerie'])){ // MODIFICATION GALERIE
+        $galeries = GalerieDataBase::read();
+        foreach ($galeries as $galerie){
+            $galeriename ='';
+            if ($galerie->id == $_POST['galerieId']){
+                $galerieName = $galerie->nom;
             }
         }
         $photos = PhotoDataBase::read();
         foreach ($photos as $photo){
-            if ($photo->gallerie == $gallerieName){
-                PhotoDataBase::update($photo->id, 'gallerie', $_POST['gallerieNom']);
+            if ($photo->galerie == $galerieName){
+                PhotoDataBase::update($photo->id, 'galerie', $_POST['galerieNom']);
             }
         }
-        GallerieDataBase::update($_POST['gallerieId'],$_POST['gallerieNom']);
+        GalerieDataBase::update($_POST['galerieId'],$_POST['galerieNom']);
         header('location:/administration');
     }
-    if(isset($_POST['supprGallerie'])){ // SUPPRESSION GALLERIE
-        GallerieDataBase::delete($_POST['gallerieId']);
+    if(isset($_POST['supprGalerie'])){ // SUPPRESSION GALERIE
+        GalerieDataBase::delete($_POST['galerieId']);
         header('location:/administration');
     }
 
@@ -105,7 +105,7 @@
         $destination = '../upload/';
         $nom_photo = Functions::renomme_fichier($_FILES['photo']['name']); // on renomme le fichier
         Functions::uploadFichier($_FILES['photo'], $extensions, $destination, $nom_photo);
-        $photo = new Photo(null, $_POST['titre'], $_POST['description'], $_POST['gallerie'], $nom_photo);
+        $photo = new Photo(null, $_POST['titre'], $_POST['description'], $_POST['galerie'], $nom_photo);
 
         PhotoDataBase::create($photo);
         header('location:/administration');
@@ -115,7 +115,7 @@
     if(isset($_POST['modifPhoto'])){ // MODIFICATION PHOTO
         PhotoDataBase::update($_POST['photoId'],'titre',$_POST['titre']);
         PhotoDataBase::update($_POST['photoId'],'description',$_POST['description']);
-        PhotoDataBase::update($_POST['photoId'],'gallerie',$_POST['gallerie']);
+        PhotoDataBase::update($_POST['photoId'],'galerie',$_POST['galerie']);
         header('location:/administration');
     }
     if(isset($_POST['supprPhoto'])){ // SUPPRESSION PHOTO

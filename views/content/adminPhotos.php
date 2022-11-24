@@ -10,24 +10,24 @@
                     <div class="col-2">Photo</div>
                     <div class="col-2">Titre</div>
                     <div class="col-3">description</div>
-                    <div class="col-2">gallerie</div>
+                    <div class="col-2">galerie</div>
                     <div class="col-3">Action</div>
                 </div>
                     <?php
                         $photos = Src\Database\PhotoDataBase::read();
                         foreach ($photos as $photo){
-                                $galleries = Src\Database\GallerieDataBase::read();
+                                $galeries = Src\Database\GalerieDataBase::read();
                                 $selected = 'selected';
                                 $gal = '';
                                 $addPhoto = '';
-                                foreach ($galleries as $gallerie){
-                                    $addPhoto .= '<option>'.$gallerie->nom.'</option>';
-                                    if ($photo->gallerie == $gallerie->nom){
+                                foreach ($galeries as $galerie){
+                                    $addPhoto .= '<option>'.$galerie->nom.'</option>';
+                                    if ($photo->galerie == $galerie->nom){
                                         $selected = '';
-                                        $gal .= '<option selected="selected">'.$gallerie->nom.'</option>';
+                                        $gal .= '<option selected="selected">'.$galerie->nom.'</option>';
                                     }
                                     else {
-                                        $gal .= '<option>'.$gallerie->nom.'</option>';
+                                        $gal .= '<option>'.$galerie->nom.'</option>';
                                     }
                                 }
                             echo '
@@ -45,7 +45,7 @@
                                             <input type="text" name="description" id="formulaire_description" value="'.$photo->description.'">
                                         </div>
                                         <div class="col-2">
-                                            <select name="gallerie">
+                                            <select name="galerie">
                                             '.$gal.'
                                             <option '.$selected.'></option>
                                             </select>
@@ -96,7 +96,7 @@
                             <div class="modal-body">
                                 <input type="text" name="titre" id="formulaire_titre" placeholder="Titre">
                                 <input type="text" name="description" id="formulaire_description" placeholder="Description">
-                                <select name="gallerie">
+                                <select name="galerie">
                                     <option selected="selected"></option>
                                     <?=$addPhoto?>
                                 </select>

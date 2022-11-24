@@ -6,13 +6,13 @@ use Src\Models\Photo;
 
       public static function create ($photo){
         try{
-          $sql= "INSERT INTO `photo`(`titre`, `description`, `gallerie`, `URLFichier`) 
-            VALUES (:titre, :description, :gallerie, :URLFichier);"; // Sécurité contre les injections SQL
+          $sql= "INSERT INTO `photo`(`titre`, `description`, `galerie`, `URLFichier`) 
+            VALUES (:titre, :description, :galerie, :URLFichier);"; // Sécurité contre les injections SQL
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute([
                 'titre'=>$photo->titre,
                 'description'=>$photo->description,
-                'gallerie'=>$photo->gallerie,
+                'galerie'=>$photo->galerie,
                 'URLFichier'=>$photo->image
             ]);
         }
@@ -30,7 +30,7 @@ use Src\Models\Photo;
             $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new Photo($objReq->ID, $objReq->titre, $objReq->description, $objReq->gallerie, $objReq->URLFichier);
+              $obj[] = new Photo($objReq->ID, $objReq->titre, $objReq->description, $objReq->galerie, $objReq->URLFichier);
             }
             return $obj;
         }

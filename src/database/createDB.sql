@@ -30,18 +30,18 @@ CREATE TABLE `photo` ( -- CREATION DE LA TABLE PHOTO
     `ID` int(35) NOT NULL AUTO_INCREMENT,
     `titre` varchar(255) NOT NULL,
     `description` varchar(255) NOT NULL,
-    `gallerie` varchar(255) NOT NULL,
+    `galerie` varchar(255) NOT NULL,
     `URLFichier` varchar(255) NOT NULL,
     PRIMARY KEY(`ID`) 
 );
 
-CREATE TABLE `gallerie` ( -- CREATION DE LA TABLE Gallerie
+CREATE TABLE `galerie` ( -- CREATION DE LA TABLE Galerie
     `ID` int(35) NOT NULL AUTO_INCREMENT,
     `nom` varchar(255) NOT NULL,
     PRIMARY KEY(`id`) 
 );
-INSERT INTO `gallerie` (nom) VALUES ('Caroussel (3 max)');
-INSERT INTO `gallerie` (nom) VALUES ('Slider');
+INSERT INTO `galerie` (nom) VALUES ('Caroussel (3 max)');
+INSERT INTO `galerie` (nom) VALUES ('Slider');
 
 CREATE TABLE `reservation` ( -- CREATION DE LA TABLE RESERVATION
     `ID` int(35) NOT NULL AUTO_INCREMENT,

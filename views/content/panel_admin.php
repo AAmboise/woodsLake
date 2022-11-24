@@ -28,7 +28,7 @@
         require_once 'adminExtraits.php';
 
         // PHOTOS
-        require_once 'adminGalleries.php';
+        require_once 'adminGaleries.php';
         require_once 'adminPhotos.php';
     ?>
     </div>

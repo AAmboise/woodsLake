@@ -60,7 +60,7 @@ body {
   .extrait__card audio {
     margin-bottom: 10px;
   }
-  .gallerie__card img {
+  .galerie__card img {
     padding: 10px;
   }
   .contactForm__card1 {
@@ -365,16 +365,16 @@ h3 {
   margin-left: -100px;
 }
 
-.gallerie__mainTitre {
+.galerie__mainTitre {
   font-size: 35px;
   font-weight: bold;
 }
 
-.gallerie__card img {
+.galerie__card img {
   height: 200px;
 }
 
-.gallerie__titre {
+.galerie__titre {
   font-size: 25px;
   font-weight: bold;
   color: black;
@@ -420,11 +420,11 @@ h3 {
   font-size: 35px;
 }
 
-.panel__card--users .barre, .panel__card--concerts .barre, .panel__card--extraits .barre, .panel__card--galleries .barre, .panel__card--photos .barre {
+.panel__card--users .barre, .panel__card--concerts .barre, .panel__card--extraits .barre, .panel__card--galeries .barre, .panel__card--photos .barre {
   text-align: center;
   border-top: 3px solid rgb(0, 0, 0);
 }
-.panel__card--users .barre input, .panel__card--concerts .barre input, .panel__card--extraits .barre input, .panel__card--galleries .barre input, .panel__card--photos .barre input {
+.panel__card--users .barre input, .panel__card--concerts .barre input, .panel__card--extraits .barre input, .panel__card--galeries .barre input, .panel__card--photos .barre input {
   border: none;
 }
 

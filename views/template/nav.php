@@ -17,7 +17,7 @@
               <a class="nav-link <?php if (isset($activeGroupe)){ echo $activeGroupe; } ?>" href="/groupe">Le groupe</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if (isset($activeGallerie)){ echo $activeGallerie; } ?>" href="/gallerie">Gallerie</a>
+              <a class="nav-link <?php if (isset($activeGalerie)){ echo $activeGalerie; } ?>" href="/galerie">Galerie</a>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php if (isset($activeContact)){ echo $activeContact; } ?>" href="/contact">Nous contacter</a>

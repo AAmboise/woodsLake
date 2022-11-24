@@ -1,7 +1,7 @@
 <?php
 namespace Src\Models;
 
-    class Gallerie{
+    class Galerie{
 
         public int $id;
         public string $nom;

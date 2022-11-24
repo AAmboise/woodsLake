@@ -1,7 +1,7 @@
 <div class="row slick justify-content-center text-start my-3">
     <div class="col-8">
         <div class="slick__titre">
-            <div id="slick">Gallerie photo</div>
+            <div id="slick">Galerie photo</div>
             <div class="bande"></div>
         </div>
 
@@ -9,7 +9,7 @@
   <?php
       $photos = Src\Database\PhotoDataBase::read();
       foreach ($photos as $photo){
-        if ($photo->gallerie == 'Slider'){
+        if ($photo->galerie == 'Slider'){
           echo '
           <div><img src="/upload/'.$photo->image.'" alt="'.$photo->description.'"></div>
           ';

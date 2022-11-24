@@ -1,16 +1,16 @@
 <?php
 namespace Src\Database;
-use Src\Models\Gallerie;
+use Src\Models\Galerie;
 
-  class GallerieDataBase {
+  class GalerieDataBase {
 
-      public static function create ($gallerie){
+      public static function create ($galerie){
         try{
-          $sql= "INSERT INTO `gallerie`(`nom`) 
+          $sql= "INSERT INTO `galerie`(`nom`) 
             VALUES (:nom);"; // Sécurité contre les injections SQL
             $db=DataBase::getPDO()->prepare($sql);  
             $db->execute([
-                'nom'=>$gallerie->nom
+                'nom'=>$galerie->nom
             ]);
         }
         catch (\PDOException $exception){
@@ -21,13 +21,13 @@ use Src\Models\Gallerie;
 
       public static function read () {
         try {
-          $sql= "SELECT * from `gallerie`"; 
+          $sql= "SELECT * from `galerie`"; 
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
             $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new Gallerie($objReq->ID, $objReq->nom);
+              $obj[] = new Galerie($objReq->ID, $objReq->nom);
             }
             return $obj;
         }
@@ -37,11 +37,11 @@ use Src\Models\Gallerie;
         } 
       }
 
-      public static function update ($gallerieId, $value){
+      public static function update ($galerieId, $value){
         try{
-          $sql= "UPDATE `gallerie`
+          $sql= "UPDATE `galerie`
             SET nom = '$value' 
-            WHERE `id` = $gallerieId;";
+            WHERE `id` = $galerieId;";
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }
@@ -51,10 +51,10 @@ use Src\Models\Gallerie;
         } 
       }
 
-      public static function delete ($gallerieId){
+      public static function delete ($galerieId){
         try{
-          $sql= "DELETE FROM `gallerie` 
-            WHERE `id` = $gallerieId;";
+          $sql= "DELETE FROM `galerie` 
+            WHERE `id` = $galerieId;";
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute();
         }

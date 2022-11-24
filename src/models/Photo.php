@@ -6,15 +6,15 @@ namespace Src\Models;
         public int $id;
         public string $titre;
         public string $description;
-        public string $gallerie;
+        public string $galerie;
         public string $image;
 
 
-        public function __construct($id, $titre, $description, $gallerie, $image){
+        public function __construct($id, $titre, $description, $galerie, $image){
             $this->id = (int)$id;
             $this->titre = $titre;
             $this->description = $description;
-            $this->gallerie = $gallerie;
+            $this->galerie = $galerie;
             $this->image = $image;
         }
 
@@ -42,11 +42,11 @@ namespace Src\Models;
             return $this;
         }
 
-        public function getGallerie(){
-            return $this->gallerie;
+        public function getGalerie(){
+            return $this->galerie;
         }
-        public function setGallerie(string $gallerie) {
-            $this->gallerie = $gallerie;
+        public function setGalerie(string $galerie) {
+            $this->galerie = $galerie;
             return $this;
         }
 

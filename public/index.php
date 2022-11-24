@@ -13,8 +13,8 @@ switch($path){
     case '/groupe':
         require_once '../src/Controllers/groupeController.php';
     break;
-    case '/gallerie':
-        require_once '../src/Controllers/gallerieController.php';
+    case '/galerie':
+        require_once '../src/Controllers/galerieController.php';
     break;
     case '/contact':
         require_once '../src/Controllers/contactController.php';
