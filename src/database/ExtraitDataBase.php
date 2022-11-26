@@ -28,7 +28,7 @@ use Src\Models\Extrait;
             $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new Extrait($objReq->ID, $objReq->titre, $objReq->URLFichier);
+              $obj[] = new Extrait($objReq->id, $objReq->titre, $objReq->URLFichier);
             }
             return $obj;
         }

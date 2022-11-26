@@ -27,7 +27,7 @@ use Src\Models\Galerie;
             $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new Galerie($objReq->ID, $objReq->nom);
+              $obj[] = new Galerie($objReq->id, $objReq->nom);
             }
             return $obj;
         }

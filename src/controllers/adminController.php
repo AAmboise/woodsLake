@@ -40,7 +40,7 @@
     if(isset($_POST['createConcert'])){// CREATION CONCERT
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
         $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
-        $destination = '../upload/';
+        $destination = '../public/upload/';
         $nom_fichier = Functions::renomme_fichier($_FILES['image']['name']); // on renomme le fichier
         Functions::uploadFichier($_FILES['image'], $extensions, $destination, $nom_fichier);
         $concert = new Concert(null, $_POST['date'], $_POST['lieu'], $_POST['heure'], $nom_fichier);
@@ -53,9 +53,9 @@
         ConcertDataBase::update($_POST['concertId'],'lieu',$_POST['lieu']);
         ConcertDataBase::update($_POST['concertId'],'heure',$_POST['heure']);
         if(!empty($_FILES['image'])){
-            unlink('./upload/'.$_POST['concertName']); // on supprime l'ancienne photo
+            unlink('./public/upload/'.$_POST['concertName']); // on supprime l'ancienne photo
             $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
-            $destination = '../upload/';
+            $destination = '../public/upload/';
             $url_image = Functions::renomme_fichier($_FILES['image']['name']); // on renomme le nouveau fichier
             Functions::uploadFichier($_FILES['image'], $extensions, $destination, $url_image); // on upload la nouvelle iage
             ConcertDataBase::update($_POST['concertId'],'URLImage',$url_image);
@@ -63,7 +63,7 @@
         header('location:/administration');
     }
     if(isset($_POST['supprConcert'])){ // SUPPRESSION CONCERT
-        unlink('./upload/'.$_POST['concertName']);
+        unlink('./public/upload/'.$_POST['concertName']);
         ConcertDataBase::delete($_POST['concertId']);
         header('location:/administration');
     }
@@ -102,10 +102,16 @@
     if(isset($_POST['createPhoto']) ){// CREATION PHOTO
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
         $extensions = ['.JPG','.jpg','.PNG','.png','.JPEG','.jpeg'];
-        $destination = '../upload/';
+        $destination = '../public/upload/';
         $nom_photo = Functions::renomme_fichier($_FILES['photo']['name']); // on renomme le fichier
         Functions::uploadFichier($_FILES['photo'], $extensions, $destination, $nom_photo);
-        $photo = new Photo(null, $_POST['titre'], $_POST['description'], $_POST['galerie'], $nom_photo);
+        $galeries = GalerieDatabase::read();
+        foreach ($galeries as $galerie){
+            if ($galerie->nom == $_POST['galerie']){
+                $galerieId = $galerie->id; 
+            }
+        }
+        $photo = new Photo(null, $_POST['titre'], $_POST['description'], $galerieId, $nom_photo);
 
         PhotoDataBase::create($photo);
         header('location:/administration');
@@ -115,11 +121,17 @@
     if(isset($_POST['modifPhoto'])){ // MODIFICATION PHOTO
         PhotoDataBase::update($_POST['photoId'],'titre',$_POST['titre']);
         PhotoDataBase::update($_POST['photoId'],'description',$_POST['description']);
-        PhotoDataBase::update($_POST['photoId'],'galerie',$_POST['galerie']);
+        $galeries = GalerieDatabase::read();
+        foreach ($galeries as $galerie){
+            if ($galerie->nom == $_POST['galerie']){
+                $galerieId = $galerie->id; 
+            }
+        }
+        PhotoDataBase::update($_POST['photoId'],'galerie_id',$galerieId);
         header('location:/administration');
     }
     if(isset($_POST['supprPhoto'])){ // SUPPRESSION PHOTO
-        unlink('./upload/'.$_POST['photoName']);
+        unlink('./public/upload/'.$_POST['photoName']);
         PhotoDataBase::delete($_POST['photoId']);
         header('location:/administration');
     }
@@ -127,7 +139,7 @@
     if(isset($_POST['createExtrait'])){// CREATION EXTRAIT
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {   
         $extensions = ['.MP3','.mp3','.WAV','.wav','.WMA','.wma', '.MIDI', '.midi'];
-        $destination = '../upload/';
+        $destination = '../public/upload/';
         $nom_fichier = Functions::renomme_fichier($_FILES['extrait']['name']); // on renomme le fichier
         Functions::uploadFichier($_FILES['extrait'], $extensions, $destination, $nom_fichier);
         $extrait = new Extrait(null, $_POST['titre'], $nom_fichier);
@@ -140,7 +152,7 @@
         header('location:/administration');
     }
     if(isset($_POST['supprExtrait'])){ // SUPPRESSION EXTRAIT
-        unlink('./upload/'.$_POST['extraitName']);
+        unlink('./public/upload/'.$_POST['extraitName']);
         ExtraitDataBase::delete($_POST['extraitId']);
         header('location:/administration');
     }

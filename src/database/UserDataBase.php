@@ -33,7 +33,7 @@ class UserDataBase {
             $req = $db->fetchALL(PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new User($objReq->ID, $objReq->nom, $objReq->prenom, $objReq->email, $objReq->telephone, $objReq->password, $objReq->isAdmin);
+              $obj[] = new User($objReq->id, $objReq->nom, $objReq->prenom, $objReq->email, $objReq->telephone, $objReq->password, $objReq->isAdmin);
             }
             return $obj;
         }

@@ -6,7 +6,7 @@ use Src\Models\Photo;
 
       public static function create ($photo){
         try{
-          $sql= "INSERT INTO `photo`(`titre`, `description`, `galerie`, `URLFichier`) 
+          $sql= "INSERT INTO `photo`(`titre`, `description`, `galerie_id`, `URLFichier`) 
             VALUES (:titre, :description, :galerie, :URLFichier);"; // Sécurité contre les injections SQL
             $db=DataBase::getPDO()->prepare($sql);
             $db->execute([
@@ -30,9 +30,10 @@ use Src\Models\Photo;
             $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new Photo($objReq->ID, $objReq->titre, $objReq->description, $objReq->galerie, $objReq->URLFichier);
+              $obj[] = new Photo($objReq->id, $objReq->titre, $objReq->description, $objReq->galerie_id, $objReq->URLFichier);
             }
             return $obj;
+
         }
         catch (\PDOException $exception){
           $msgErreur = $exception->getMessage();

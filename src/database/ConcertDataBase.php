@@ -30,7 +30,7 @@ use Src\Models\Concert;
             $req = $db->fetchALL(\PDO::FETCH_OBJ);
             $obj = [];
             foreach ($req as $objReq){
-              $obj[] = new Concert($objReq->ID, $objReq->date, $objReq->lieu, $objReq->heure, $objReq->URLImage);
+              $obj[] = new Concert($objReq->id, $objReq->date, $objReq->lieu, $objReq->heure, $objReq->URLImage);
             }
             return $obj;
         }

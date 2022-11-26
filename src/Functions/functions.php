@@ -9,7 +9,7 @@ class Functions{
         $header = false;
         $photos = PhotoDataBase::read();
         foreach ($photos as $photo){
-            if ($photo->galerie == 'Caroussel (3 max)'){
+            if ($photo->galerie == 1){
                 $header = true;
             }
         }
@@ -20,7 +20,7 @@ class Functions{
         $slick = false;
         $photos = PhotoDataBase::read();
         foreach ($photos as $photo){
-            if ($photo->galerie == 'Slider'){
+            if ($photo->galerie == 2){
                 $slick = true;
             }
         }

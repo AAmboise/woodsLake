@@ -6,7 +6,7 @@ namespace Src\Models;
         public int $id;
         public string $titre;
         public string $description;
-        public string $galerie;
+        public int $galerie;
         public string $image;
 
 
@@ -14,7 +14,7 @@ namespace Src\Models;
             $this->id = (int)$id;
             $this->titre = $titre;
             $this->description = $description;
-            $this->galerie = $galerie;
+            $this->galerie = (int)$galerie;
             $this->image = $image;
         }
 
@@ -45,7 +45,7 @@ namespace Src\Models;
         public function getGalerie(){
             return $this->galerie;
         }
-        public function setGalerie(string $galerie) {
+        public function setGalerie($galerie) {
             $this->galerie = $galerie;
             return $this;
         }

@@ -1,5 +1,5 @@
 /node_module
-/upload
+/public/upload
 /Src/Configuration/dev.ini
 /Src/Ajax/listeEmail.json
 

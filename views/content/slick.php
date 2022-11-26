@@ -9,7 +9,7 @@
   <?php
       $photos = Src\Database\PhotoDataBase::read();
       foreach ($photos as $photo){
-        if ($photo->galerie == 'Slider'){
+        if ($photo->galerie == 2){
           echo '
           <div><img src="/upload/'.$photo->image.'" alt="'.$photo->description.'"></div>
           ';

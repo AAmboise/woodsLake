@@ -22,7 +22,7 @@
                                 $addPhoto = '';
                                 foreach ($galeries as $galerie){
                                     $addPhoto .= '<option>'.$galerie->nom.'</option>';
-                                    if ($photo->galerie == $galerie->nom){
+                                    if ($photo->galerie == $galerie->id){
                                         $selected = '';
                                         $gal .= '<option selected="selected">'.$galerie->nom.'</option>';
                                     }
@@ -64,11 +64,11 @@
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Êtes vous sûr de vouloir supprimer ce compte ?
+                                                        Êtes vous sûr de vouloir supprimer cette photo ?
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-success" data-bs-dismiss="modal">Annuler</button>
-                                                        <button type="submit" name="supprPhoto" class="btn btn-danger">Supprimer le compte</button>
+                                                        <button type="submit" name="supprPhoto" class="btn btn-danger">Supprimer la photo</button>
                                                     </div>
                                                 </div>
                                             </div>
